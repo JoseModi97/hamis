@@ -1,33 +1,23 @@
-# Hostel Administration Management Information System (HAMIS)
+# HAMIS
 
-HAMIS is a PHP-based system used by the University of Nairobi for handling hostel accommodation applications, room bookings and related invoicing tasks. This repository contains a snapshot of the PHP code, templates and data files used to run the application.
+HAMIS (Halls Accommodation Management Information System) is a PHP application used to manage student hostel bookings and related invoices. It integrates with the Student Management Information System (SMIS) of the University of Nairobi and uses several third party libraries such as FPDF, ADOdb and Smarty.
 
 ## Setup
 
-1. **Requirements**
-   - PHP 7.x or later with MySQL extensions.
-   - A MySQL database server (and optionally Oracle if required by your environment).
-   - The [ADODB](https://adodb.sourceforge.net/) library for database access.
-   - [FPDF](https://www.fpdf.org/) for PDF generation and other third‑party libraries included in `zephyr/thirdparty`.
-
-2. **Installation**
-   - Clone or extract this repository to a directory served by your web server.
-   - Configure database credentials in `smis_class_inc.php` and related files. Sample credentials are present in the source but will not work in your environment.
-   - Ensure the ADODB and FPDF libraries are available and update the include paths if necessary.
-   - Set up MySQL (and Oracle if needed) databases using your own credentials and schema. The repository does not contain database dumps.
-
-3. **Running**
-   - Point your web browser to `bookroom.php` or `apply_for_room.php` once the server is configured.
-   - Generated invoice text files can be found under the `invoices/` directory, while PDFs are produced via `generate_invoice_pdf.php`.
+1. Clone or copy the repository into a directory served by your web server.
+2. Ensure PHP 5.x or later is installed with required extensions (`mysqli`, `oci8`).
+3. Edit configuration values in the PHP scripts as needed. In particular `smis_class_inc.php` contains database connection details.
+4. Configure your HTTP server (Apache/Nginx) to point to this directory.
 
 ## Usage
 
-The application allows students to log in, apply for hostel accommodation and print invoices. Administrators manage room allocations and billing through the same interface. Because this is a legacy code base, many configuration values (such as database connections) are hardcoded and need to be changed for your local deployment.
+After configuration, access pages like `apply_for_room.php` or `bookroom.php` using a browser. Students authenticate with their registration number and password. The system then allows them to apply for accommodation, view allocations and generate invoice PDFs.
 
-## Disclaimer
+## Disclaimers
 
-This project depends on external libraries (ADODB, FPDF and others) and database credentials that are **not** provided. Before running HAMIS you must supply valid database credentials and verify that all required PHP extensions and libraries are installed. The repository is offered as‑is with no warranty; use at your own risk.
+- **Credentials**: Database credentials for SMIS and HAMIS are required. The example configuration in `smis_class_inc.php` includes placeholders that must be replaced with valid credentials.
+- **External Dependencies**: This project depends on external libraries (FPDF, ADOdb, Smarty) which are included in the repository. Ensure the necessary PHP extensions are enabled.
 
 ## License
 
-This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is released under the MIT License. See the [LICENSE](LICENSE) file for more information.
