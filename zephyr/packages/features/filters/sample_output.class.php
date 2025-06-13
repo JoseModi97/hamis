@@ -1,4 +1,4 @@
-<?
+<?php
 class sample_output
 {
 	public function process($content, $action)

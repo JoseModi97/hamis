@@ -1,4 +1,4 @@
-<?
+<?php
 class process_output_filter implements action
 {
 	public $params;

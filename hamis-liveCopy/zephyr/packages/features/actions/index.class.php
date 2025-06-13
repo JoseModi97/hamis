@@ -1,4 +1,4 @@
-<?
+<?php
 class index implements action
 {
 	public $params;

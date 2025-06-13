@@ -1,4 +1,4 @@
-<?
+<?php
 	if($_SERVER["HTTP_HOST"] == '10.2.21.87' || $_SERVER["HTTP_HOST"]=='smis.uonbi.ac.ke'){
 		define('SMIS_RELATIVE_PATH', $_SERVER['DOCUMENT_ROOT']);
 		define('RELATIVE_PATH', SMIS_RELATIVE_PATH  . '/hamis');
@@ -92,6 +92,6 @@
     <div align="center"> For any correspondence on online room application write to <a href="mailto:hamis@uonbi.ac.ke">hamis@uonbi.ac.ke<a><br /> <br /><p align="center"><a href="terms_conditions.pdf" target="_blank">SWA Room Accomodation Terms and Conditions</p></a></div>
 	</div>
 </div>
-<?
+<?php
 	include_once(SMIS_RELATIVE_PATH .  '/includes/smis_footer.php');  
 ?>

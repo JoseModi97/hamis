@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * helper routines to load actions. 
  * 

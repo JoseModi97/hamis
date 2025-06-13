@@ -268,7 +268,7 @@ echo '<style type="text/css">
         ?>
     </div>
 </div>
-<?
+<?php
 function get_client_ip()
 {
     $ipaddress = '';

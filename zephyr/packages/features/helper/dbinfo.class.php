@@ -1,4 +1,4 @@
-<?
+<?php
 class dbinfo extends abstractdbinfo
 {
 	public function __construct()

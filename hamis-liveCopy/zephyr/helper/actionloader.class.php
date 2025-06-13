@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * common actionloader class, loads actions
  * 

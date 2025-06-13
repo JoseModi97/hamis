@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Data Access Object which inserts, updates and deletes thru every possible model
  * 

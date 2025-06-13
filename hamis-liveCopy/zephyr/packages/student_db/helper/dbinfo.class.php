@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * dbinfo.class.php
  * this class exposes the information to loginto database relevant to this package

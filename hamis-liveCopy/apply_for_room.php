@@ -1,4 +1,4 @@
-<?
+<?php
 	define('SMIS_RELATIVE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/smis');
 	include_once(SMIS_RELATIVE_PATH .  '/includes/smis_header_common.php');
 	define('RELATIVE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/hamis');
@@ -61,6 +61,6 @@ form{margin:0;padding:0 0 10px 0; border:1px dashed #ccc}fieldset{margin:1em 0;b
    ?>
 	</div>
 </div>
-<?
+<?php
 	include_once(SMIS_RELATIVE_PATH .  '/includes/smis_footer.php');  
 ?>

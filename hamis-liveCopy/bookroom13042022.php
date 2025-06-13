@@ -1,4 +1,4 @@
-<?
+<?php
 	if($_SERVER["HTTP_HOST"] == '10.2.21.87' || $_SERVER["HTTP_HOST"]=='smis.uonbi.ac.ke'){
 		define('SMIS_RELATIVE_PATH', $_SERVER['DOCUMENT_ROOT']);
 		define('RELATIVE_PATH', SMIS_RELATIVE_PATH  . '/hamis');
@@ -194,6 +194,6 @@
 	?>
 	</div>
 </div>
-<?
+<?php
 	include_once(SMIS_RELATIVE_PATH .  '/includes/smis_footer.php');  
 ?>

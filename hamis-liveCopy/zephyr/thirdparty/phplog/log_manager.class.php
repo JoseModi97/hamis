@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * log_manager.class.php
  * logger singleton

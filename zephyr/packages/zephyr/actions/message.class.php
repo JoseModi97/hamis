@@ -1,4 +1,4 @@
-<?
+<?php
 
 class message implements  action {
 	

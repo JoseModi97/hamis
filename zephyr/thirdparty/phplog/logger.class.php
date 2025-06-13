@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * logger.class.php
  * logger object to log debug messages

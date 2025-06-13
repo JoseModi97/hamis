@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * the startup page of zephyr
  * 

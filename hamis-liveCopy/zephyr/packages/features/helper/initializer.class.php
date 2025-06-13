@@ -1,4 +1,4 @@
-<?
+<?php
 class initializer 
 {
 	public function initiate()

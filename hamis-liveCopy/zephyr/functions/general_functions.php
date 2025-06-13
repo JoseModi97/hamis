@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * load a db_domain model from current package context
  * 
