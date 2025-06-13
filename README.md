@@ -5,7 +5,7 @@ HAMIS (Halls Accommodation Management Information System) is a PHP application u
 ## Setup
 
 1. Clone or copy the repository into a directory served by your web server.
-2. Ensure PHP 5.x or later is installed with required extensions (`mysqli`, `oci8`).
+2. Ensure PHP 8.1.25 or later is installed with required extensions (`mysqli`, `oci8`).
 3. Edit configuration values in the PHP scripts as needed. In particular `smis_class_inc.php` contains database connection details.
 4. Configure your HTTP server (Apache/Nginx) to point to this directory.
 
