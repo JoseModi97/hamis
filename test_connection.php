@@ -7,19 +7,11 @@ $db = NewADOConnection('mysql');
 // Optional: show detailed debug messages
 $db->debug = true;
 
-// Connection parameters
-$host = 'smisdbclone.uonbi.ac.ke';
-//smis
-// $username = 'websmis';
-// $password = 'smis_dev_2023';
-// $database = 'smis';
-
-//hamis
-$username = 'hamis_user';
-$password = 'hamis_dev_2025';
-$database = 'hamis';
-
-//hamis
+// Connection parameters loaded from environment
+$host = getenv('HAMIS_DB_HOST');
+$username = getenv('HAMIS_DB_USER');
+$password = getenv('HAMIS_DB_PASS');
+$database = getenv('HAMIS_DB_NAME');
 
 
 try {

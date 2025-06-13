@@ -161,28 +161,38 @@ class smis
 
 		$ADODB_CACHE_DIR = RelativePath . '/tmp';
 
-		// TNS name for Oracle
-		$tnsName = "(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = proddb2.uonbi.ac.ke)(PORT = 1521))) (CONNECT_DATA = (SERVICE_NAME = proddb2)))";
+                // TNS name for Oracle
+                $tnsName = getenv('ORACLE_TNS');
 
 		if (function_exists('NewADOConnection')) {
 
-			// MySQL DSNs
-			$MysqlSmisDsn = "mysql://hamis_user:hamis_09@smisdbclone.uonbi.ac.ke/smis";
-			$MysqlHamisDsn = "mysql://hamis_user:hamis_09@smisdbclone.uonbi.ac.ke/hamis";
+                        // MySQL connection details from environment
+                        $smisHost = getenv('SMIS_DB_HOST');
+                        $smisUser = getenv('SMIS_DB_USER');
+                        $smisPass = getenv('SMIS_DB_PASS');
+                        $smisName = getenv('SMIS_DB_NAME');
+
+                        $hamisHost = getenv('HAMIS_DB_HOST');
+                        $hamisUser = getenv('HAMIS_DB_USER');
+                        $hamisPass = getenv('HAMIS_DB_PASS');
+                        $hamisName = getenv('HAMIS_DB_NAME');
+
+                        $MysqlSmisDsn = "mysql://{$smisUser}:{$smisPass}@{$smisHost}/{$smisName}";
+                        $MysqlHamisDsn = "mysql://{$hamisUser}:{$hamisPass}@{$hamisHost}/{$hamisName}";
 
 			// Initialize MySQL connections
 			$this->MysqlSmisDB = NewADOConnection('mysql');
 			$this->MysqlHamisDB = NewADOConnection('mysql');
 
-			$this->MysqlSmisDB->Connect('smisdbclone.uonbi.ac.ke', 'websmis', 'smis_dev_2023', 'smis');
+                        $this->MysqlSmisDB->Connect($smisHost, $smisUser, $smisPass, $smisName);
 			$this->MysqlSmisDB->SetFetchMode(ADODB_FETCH_ASSOC);
 
-			$this->MysqlHamisDB->Connect('smisdbclone.uonbi.ac.ke', 'websmis', 'smis_dev_2023', 'smis');
+                        $this->MysqlHamisDB->Connect($hamisHost, $hamisUser, $hamisPass, $hamisName);
 			$this->MysqlHamisDB->SetFetchMode(ADODB_FETCH_ASSOC);
 
 			// Oracle login
-			$loggedonUser = "swa";
-			$logonPassword = "hamis_dev_2024";
+                        $loggedonUser = getenv('ORACLE_USER');
+                        $logonPassword = getenv('ORACLE_PASS');
 
 			// Initialize and connect Oracle DB
 			$this->Ora_Db = NewADOConnection('oci8');
