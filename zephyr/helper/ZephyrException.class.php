@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * customized exception object for zephyr
  * 

@@ -1,4 +1,4 @@
-<?
+<?php
 class createdb implements action
 {
 	public $params;

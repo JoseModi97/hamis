@@ -1,4 +1,4 @@
-<?
+<?php
 	if($_SERVER["HTTP_HOST"] == 'localhost' || $_SERVER["HTTP_HOST"]=='smis.uonbi.ac.ke'){
 		//define('SMIS_RELATIVE_PATH', $_SERVER['DOCUMENT_ROOT'] .'/smis');
 		define('SMIS_RELATIVE_PATH', $_SERVER['DOCUMENT_ROOT']);
@@ -238,7 +238,7 @@
 	?>
 	</div>
 </div>
-<?	
+<?php	
 	function get_client_ip() {
 		$ipaddress = '';
 		if (!empty($_SERVER['HTTP_CLIENT_IP']))

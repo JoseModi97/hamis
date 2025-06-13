@@ -1,4 +1,4 @@
-<? 
+<?php 
 class std {
 	public $roll;
 	public $name;

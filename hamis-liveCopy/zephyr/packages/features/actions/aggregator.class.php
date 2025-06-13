@@ -1,4 +1,4 @@
-<?
+<?php
 class aggregator implements action
 {
 	public $params;

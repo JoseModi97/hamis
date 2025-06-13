@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * this class loads javascript files for a specific package
  * 

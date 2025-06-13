@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * this class loads php files from a specific package
  * 

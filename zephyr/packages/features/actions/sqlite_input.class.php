@@ -1,4 +1,4 @@
-<?
+<?php
 class sqlite_input implements action
 {
 	public $params;

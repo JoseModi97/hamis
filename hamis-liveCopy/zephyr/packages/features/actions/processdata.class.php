@@ -1,4 +1,4 @@
-<?
+<?php
 class processdata implements action
 {
 	public $params;

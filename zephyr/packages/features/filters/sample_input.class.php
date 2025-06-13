@@ -1,4 +1,4 @@
-<?
+<?php
 class sample_input
 {
 	public function process($params, $action)

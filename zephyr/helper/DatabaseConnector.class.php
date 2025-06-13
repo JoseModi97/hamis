@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * Database connector, a singleton of adoDB
  * 

@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * smarty.class.php
  * smarty singleton

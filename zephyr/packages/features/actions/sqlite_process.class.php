@@ -1,4 +1,4 @@
-<?
+<?php
 load_db_domain("student");
 class sqlite_process implements action
 {

@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * verifystd.class.php
  * auto generated code for zephyr using 'generator' version 2.00

@@ -1,4 +1,4 @@
-<?
+<?php
 class execute_script implements action
 {
 	public $params;

@@ -1,4 +1,4 @@
-<?
+<?php
 class image implements action
 {
 	public $params;

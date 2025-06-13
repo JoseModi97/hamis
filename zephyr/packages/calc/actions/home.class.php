@@ -1,4 +1,4 @@
-<?
+<?php
 class home implements action
 {
 	public $params;

@@ -1,4 +1,4 @@
-<?
+<?php
 
 class display_message implements  action {
 	

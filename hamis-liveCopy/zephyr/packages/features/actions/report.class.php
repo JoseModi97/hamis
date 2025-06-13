@@ -1,4 +1,4 @@
-<?
+<?php
 class report implements action
 {
 	public $params;

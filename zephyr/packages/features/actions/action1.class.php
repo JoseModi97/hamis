@@ -1,4 +1,4 @@
-<?
+<?php
 class action1 implements action
 {
 	public $params;

@@ -1,4 +1,4 @@
-<?
+<?php
 class datainput implements action
 {
 	public $params;

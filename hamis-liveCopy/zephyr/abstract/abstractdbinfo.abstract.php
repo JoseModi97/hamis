@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * abstract database info
  * 

@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * packagemanager.class.php
  * this class loads all the package informations and defines the action path
