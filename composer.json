@@ -1,0 +1,6 @@
+{
+    "name": "hamis/hamis",
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    }
+}
