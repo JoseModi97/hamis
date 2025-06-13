@@ -1,0 +1,6 @@
+Maseno;M4;FIRST;26.00;2,730.00
+Maseno;M4;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,460.00
+Balance Brought  Forward ;;;;-2,870.00
+Amount Payable: ;;;;0.00

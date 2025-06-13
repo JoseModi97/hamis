@@ -1,0 +1,6 @@
+Block  A Male (kmsh);13;FIRST;30.00;3,150.00
+Block  A Male (kmsh);13;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;6,561.00
+Amount Payable: ;;;;6,561.00

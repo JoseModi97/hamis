@@ -1,0 +1,6 @@
+Masaku;23;FIRST;30.00;3,150.00
+Masaku;23;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;6,322.00
+Amount Payable: ;;;;6,322.00

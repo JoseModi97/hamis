@@ -1,0 +1,6 @@
+Jamhuri;SR329;SECOND;30.00;3,150.00
+Jamhuri;212;FIRST;28.00;2,352.00
+;;;;
+Total Invoice Amount: ;;;;5,502.00
+Balance Carried  Forward ;;;;10,059.00
+Amount Payable: ;;;;10,059.00

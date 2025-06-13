@@ -1,0 +1,6 @@
+Kapernguria;E6;FIRST;26.00;2,730.00
+Kapernguria;E6;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,460.00
+Balance Carried  Forward ;;;;8,340.00
+Amount Payable: ;;;;8,340.00

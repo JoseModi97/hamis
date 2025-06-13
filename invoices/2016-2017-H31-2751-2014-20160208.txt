@@ -1,0 +1,6 @@
+Soweto Male  (kmsh);511;FIRST;26.00;3,276.00
+Soweto Male  (kmsh);511;SECOND;26.00;3,276.00
+;;;;
+Total Invoice Amount: ;;;;6,552.00
+Balance Brought  Forward ;;;;-51.00
+Amount Payable: ;;;;0.00

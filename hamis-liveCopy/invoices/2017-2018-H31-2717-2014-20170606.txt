@@ -1,0 +1,6 @@
+Dag-hammarsjold;203;SECOND;28.00;4,088.00
+Dag-hammarsjold;203;FIRST;28.00;3,724.00
+;;;;
+Total Invoice Amount: ;;;;7,812.00
+Balance Brought  Forward ;;;;-21.00
+Amount Payable: ;;;;0.00

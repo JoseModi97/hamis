@@ -1,0 +1,6 @@
+Jogoo;02;FIRST;30.00;3,150.00
+Jogoo;02;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Brought  Forward ;;;;-6,618.00
+Amount Payable: ;;;;-318.00

@@ -1,0 +1,6 @@
+Womens Hall;C205;FIRST;28.00;3,136.00
+Womens Hall;C205;SECOND;28.00;3,332.00
+;;;;
+Total Invoice Amount: ;;;;6,468.00
+Balance Brought  Forward ;;;;-32.00
+Amount Payable: ;;;;0.00

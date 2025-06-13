@@ -1,0 +1,6 @@
+Jamhuri;SR229;SECOND;30.00;3,150.00
+Elgon;111;FIRST;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;5,355.00
+Balance Carried  Forward ;;;;5,355.00
+Amount Payable: ;;;;5,355.00

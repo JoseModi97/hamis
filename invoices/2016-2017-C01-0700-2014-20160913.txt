@@ -1,0 +1,6 @@
+Womens Hall;LIND;SECOND;30.00;3,150.00
+Womens Hall;LIND;FIRST;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;5,490.00
+Amount Payable: ;;;;5,490.00

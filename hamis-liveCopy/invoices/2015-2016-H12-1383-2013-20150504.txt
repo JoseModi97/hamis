@@ -1,0 +1,7 @@
+Chiromo-f;D205;FIRST;28.00;2,940.00
+Chiromo-f;D205;SECOND;28.00;3,808.00
+Chiromo-f;D205;FOURTH;28.00;560.00
+;;;;
+Total Invoice Amount: ;;;;7,308.00
+Balance Carried  Forward ;;;;7,185.00
+Amount Payable: ;;;;7,185.00

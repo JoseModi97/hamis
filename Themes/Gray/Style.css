@@ -1,0 +1,216 @@
+/* Gray CCSTheme */
+
+
+
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Arial,Tahoma,Verdana,Helvetica; font-size: 13px; }
+
+
+
+.GrayPageBODY{ }
+
+
+
+.GrayFormHeaderFont{
+
+	font-size: 16px;
+
+	font-weight: bold;
+
+	font-family: Geneva, Arial, Helvetica, san-serif;
+
+	font-style: normal;
+
+	line-height: normal;
+
+	font-variant: small-caps;
+
+	text-transform: capitalize;
+
+	color: #0000FF;
+
+	text-decoration: underline;
+
+}
+
+
+
+.GrayCaptionFont{
+
+	font-size: 11px;
+
+	font-weight: bold;
+
+	font-family: Geneva, Arial, Helvetica, san-serif;
+
+	color: #FF0000;
+
+	font-style: normal;
+
+}
+
+
+
+.GrayFormTABLE{
+
+	border: 1px solid #000000;
+
+}
+
+
+
+.GrayColumnTD{ background-color: #CCCCCC; font-size: 13px; font-weight: bold; }
+
+
+
+.GrayFieldCaptionTD{ color: #000000; background-color: #CCCCCC; font-size: 13px; font-weight: bold; }
+
+
+
+.GrayDataTD{
+
+	background-color: #F4F4F4;
+
+	font-size: 12px;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-style: normal;
+
+	line-height: normal;
+
+	font-weight: normal;
+
+}
+
+
+
+.GreenDataTD{
+
+	background-color: #339900;
+
+	font-size: 10px;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-style: normal;
+
+	line-height: normal;
+
+	font-weight: normal;
+
+	color: #CCFFFF;
+
+}
+
+.RedDataTD{
+
+	background-color: #FF0000;
+
+	font-size: 10px;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-style: normal;
+
+	line-height: normal;
+
+	font-weight: normal;
+
+	color: #FFFF00;
+
+}
+
+.RedPurpleTD{
+
+	background-color: #990099;
+
+	font-size: 10px;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-style: normal;
+
+	line-height: normal;
+
+	font-weight: normal;
+
+	color: #FFFF00;
+
+}
+
+.GraySeparatorTD{ height: 1px; background-color: #000000; }
+
+
+
+.GrayAltDataTD{ background-color: #E5E5E5; font-size: 13px; }
+
+
+
+.GrayFooterTD { background-color: #CCCCCC; font-size: 13px; font-weight: bold; }
+
+
+
+a.GraySorterLink:link,a.GraySorterLink:visited{ color: #000000; font-weight: bold; text-decoration: underline; }
+
+
+
+a.GraySorterLink:hover,a.GraySorterLink:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+
+
+
+a.GrayDataLink:link,a.GrayDataLink:visited{ color: #0000FF; text-decoration: underline; }
+
+
+
+a.GrayDataLink:hover,a.GrayDataLink:active{ color: #FF0000; text-decoration: none; }
+
+
+
+a.GrayNavigatorLink:link,a.GrayNavigatorLink:visited{ color: #0000FF; font-weight: bold; text-decoration: underline; }
+
+
+
+a.GrayNavigatorLink:hover,a.GrayNavigatorLink:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+
+
+
+.GrayButton { font-family: Arial,Tahoma,Verdana,Helvetica; font-size: 13px; }
+
+
+
+.GrayInput { font-family: Arial,Tahoma,Verdana,Helvetica; font-size: 13px; }
+
+
+
+.GrayTextarea { font-family: Arial,Tahoma,Verdana,Helvetica; font-size: 13px; }
+
+
+
+.GraySelect { font-family: Arial,Tahoma,Verdana,Helvetica; font-size: 13px; }
+
+
+
+.td_left {
+
+	border-top: 1px none #00CCFF;
+
+	border-right: 1px solid #00CCFF;
+
+	border-bottom: 1px solid #00CCFF;
+
+	border-left: 1px solid #00CCFF;
+
+}
+
+.td_other {
+
+	border-top: 1px none #00CCFF;
+
+	border-right: 1px solid #00CCFF;
+
+	border-bottom: 1px solid #00CCFF;
+
+	border-left: 1px none #00CCFF;
+
+}
+

@@ -1,0 +1,6 @@
+Jamhuri;127;SECOND;28.00;2,940.00
+Africa;315;FIRST;21.00;1,764.00
+;;;;
+Total Invoice Amount: ;;;;4,704.00
+Balance Carried  Forward ;;;;4,661.00
+Amount Payable: ;;;;4,661.00

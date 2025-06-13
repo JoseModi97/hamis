@@ -1,0 +1,7 @@
+Mamlaka A;088;FOURTH;28.00;1,568.00
+Africa;400;SECOND;21.00;2,499.00
+Africa;400;FIRST;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;6,272.00
+Balance Carried  Forward ;;;;968.00
+Amount Payable: ;;;;968.00

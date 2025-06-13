@@ -1,0 +1,6 @@
+Houses;H4-11;SECOND;26.00;2,730.00
+Elgon;417;FIRST;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;4,935.00
+Balance Carried  Forward ;;;;2,730.00
+Amount Payable: ;;;;2,730.00

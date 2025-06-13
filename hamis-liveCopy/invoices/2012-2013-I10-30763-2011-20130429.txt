@@ -1,0 +1,5 @@
+Chiromo-m;CBM18;FOREIGN;180.00;33,760.00
+;;;;
+Total Invoice Amount: ;;;;33,760.00
+Balance Carried  Forward ;;;;33,020.00
+Amount Payable: ;;;;33,020.00

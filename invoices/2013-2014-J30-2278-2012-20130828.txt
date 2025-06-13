@@ -1,0 +1,7 @@
+Elgon;318;FIRST;21.00;2,352.00
+Elgon;318;FOURTH;21.00;1,176.00
+Elgon;318;SECOND;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;5,733.00
+Balance Carried  Forward ;;;;2,433.00
+Amount Payable: ;;;;2,433.00

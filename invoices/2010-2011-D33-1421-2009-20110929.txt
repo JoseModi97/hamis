@@ -1,0 +1,5 @@
+Blocks A-k;F19;VACATIONAL;60.00;6,180.00
+;;;;
+Total Invoice Amount: ;;;;6,180.00
+Balance Carried  Forward ;;;;8,672.00
+Amount Payable: ;;;;8,672.00

@@ -1,0 +1,7 @@
+Tana A;19;FIRST;30.00;3,150.00
+Tana A;19;THIRD;30.00;1,680.00
+Tana A;19;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;7,980.00
+Balance Carried  Forward ;;;;727.00
+Amount Payable: ;;;;727.00

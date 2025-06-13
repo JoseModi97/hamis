@@ -1,0 +1,6 @@
+Africa;410;FIRST;21.00;2,184.00
+Radhakrishnan;108;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;4,914.00
+Balance Brought  Forward ;;;;-529.00
+Amount Payable: ;;;;0.00

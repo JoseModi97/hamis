@@ -1,0 +1,5 @@
+Kstc 2;104;VACATIONAL;60.00;6,180.00
+;;;;
+Total Invoice Amount: ;;;;6,180.00
+Balance Carried  Forward ;;;;5,980.00
+Amount Payable: ;;;;5,980.00

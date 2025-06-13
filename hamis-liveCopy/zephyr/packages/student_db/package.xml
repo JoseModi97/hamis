@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<package>
+	<name>zephyr</name>
+	<version>1.00</version>
+	<root_template>std.tpl</root_template>
+	<root_action>home</root_action>
+	<javascript>std</javascript>
+	<css>std</css>
+</package>

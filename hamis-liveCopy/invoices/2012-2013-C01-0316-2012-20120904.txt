@@ -1,0 +1,6 @@
+Block H;H08;SECOND;26.00;2,704.00
+Block H;H08;FIRST;26.00;2,912.00
+;;;;
+Total Invoice Amount: ;;;;5,616.00
+Balance Carried  Forward ;;;;5,616.00
+Amount Payable: ;;;;5,616.00

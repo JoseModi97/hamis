@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Database</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #1c1c1b;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	color: #EEEEEE;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+h3
+{
+	font-size: 18px;
+	margin-top: 7px;
+	color: #444444;
+}
+
+.text_container
+{
+	line-height:1.5em; 
+	padding: 5px; 
+	margin-top: 5px; 
+	padding-top: 0px;
+	border: 1px solid #BBBBBB;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+
+a:active
+{
+	color: #FFFF00;
+}
+
+a:visited:hover
+{
+	text-decoration: underline;
+	color: #EEEEEE;
+}
+
+a:visited
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+.code
+{
+	font-family: "Lucida Console";
+	font-size: 12px;
+	background-color:#EEEEEE !important;
+	padding: 10px;
+	border: 1px solid;
+	border-color:#CCCCCC ;
+	display: block;
+	color: #333333 !important;
+}
+.hilight {	color: #993300;
+}
+.hl-brackets {    color: Olive;
+}
+.hl-code {    color: Gray;
+}
+.hl-comment {    color: Orange;
+}
+.hl-identifier {    color: Blue;
+}
+.hl-inlinedoc {    color: Blue;
+}
+.hl-inlinetags {    color: Blue;
+}
+.hl-main {	font-size:14px;
+}
+.hl-quotes {    color: Darkred;
+}
+.hl-reserved {    color: Green;
+}
+.hl-string {    color: Red;
+}
+.hl-var {    color: Darkblue;
+}
+.php {	font-family: "Lucida Console";
+	background-color:#FFFFFF;
+	padding: 5px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+	height: 250px;
+	overflow: auto;
+}
+-->
+</style></head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <th colspan="2" scope="col"><div align="left"><img src="ZephyrBanner.jpg" width="520" /></div>      
+    <div align="left"></div></th>
+  </tr>
+  <tr>
+    <td width="23%" valign="top"  style="border-top: 1px solid #CCCCCC; padding-top: 0px;"  ><div align="left" style="padding-left:17px; line-height:1.5em;" >
+      <p><a href="index.html">Introduction</a><br />
+        <a href="installation.html">Installation</a><br />
+        <a href="gettingstarted.html">Getting started</a><br />
+        <a href="package.html">Package Definition Reference</a><br />
+        <a href="commondb.html">Connecting to Database</a><br />
+        <a href="commondb.html">Common DB Operations </a><br />
+        <a href="filter.html">Filter</a><br />
+        <a href="multipledb.html">Handling Multiple Databases</a><br />
+        <a href="howto.html">How-Tos</a><br />
+        <a href="deployment.html">Deployment</a><br />
+        <a href="credit.html">Credit</a><br />
+        <a href="feedback.html">Feedback</a><br />
+        <a href="changelog.html">Changelog</a></p>
+      <p><a href="zephyrAPI/index.html">Zephyr API </a><br />
+        <br />
+      </p>
+    </div></td>
+    <td width="77%" valign="top" style="border-top: 1px solid #CCCCCC; padding-top: 0px;" >
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-dbinfo class-&gt;&gt;</h3>
+      <p>before connecting to any database you must define a special class which provides some credentials to internal data access object of zephyr. you can create this class by extending zephyr's internal &quot;<span class="hilight">abstractdbinfo</span>&quot; class. you must place this class in &quot;<span class="hilight">helper</span>&quot; folder inside your package. lets have a look at the following dbinfo class. inside	class constructor you set this credentials. </p>
+      <pre class="code">&lt;?
+class dbinfo extends abstractdbinfo 
+{
+	public function __construct()
+	{
+	        $this->dbhost = "localhost";
+		$this->dbname = "student";
+		$this->dbuser = "root";
+		$this->dbpwd = "root";
+		$this->dbtype = "mysql";
+		$this->persist = 1;
+	}
+}
+?></pre>
+      <p>most of these properties are self explanatory. as we used adoDB as data access layer for zephyr, so you can use almost every database type supported by adoDB without any hassle. however a little bit extra care is needed to use <span class="hilight">sqlite</span>, please see the SQLite section for details. <br />
+        <br />
+        <span class="hl-comment">zephyr comes with a minimal installation of adoDB with following drivers</span></p>
+      <p class="hl-comment">- MySQL<br />
+        - SQLite<br />
+        - Postgresql <br />
+      - MSSQL (Both ODBC and Normal)<br />
+      - ODBC<br />
+      - Oracle
+</p>
+      <p class="hl-comment">however, you can update the default adoDB installation with your requirement. adoDB is placed in \thirdparty\adodb folder inside the root directory of zephyr. </p>
+      <p>there is a complete sample package which uses sqlite. you can find this package as &quot;<span class="hilight">sqlite</span>&quot; inside packages folder. </p>
+	</div>
+<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-care for sqlite-&gt;&gt;</h3>
+      <p>as sqlite is a flat file database, so we need a little bit extra care to use sqlite. for best practise, create a separate folder under your package root for placing these sqlite databases. forexample, we create a folder named &quot;<span class="hilight">sqlitedb</span>' inside our package. our database name is &quot;<span class="hilight">test.sqlite</span>&quot;. lets see the sample dbinfo for this. </p>
+      <pre class="code">&lt;?<br />class dbinfo extends abstractdbinfo<br />{<br />	public function __construct()<br />	{<br />		$pm = new packagemanager();<br />		$package_path = $pm-&gt;get_package_path(); //physical path to this package<br />		$this-&gt;dbhost = $package_path.&quot;/sqlitedb/&quot;;<br />		$this-&gt;dbname = &quot;test.sqlite&quot;;<br />		$this-&gt;dbtype = &quot;sqlite&quot;;<br />		$this-&gt;persist = 1;<br />	}	<br />}<br />?&gt;</pre>
+      <p>now you can access this sqlite database when you instantiate the data access object. </p>
+      </div>	
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-using data access object (DAO) in actions-&gt;&gt;</h3>
+	  <p>after creating your dbinfo class, you can perform database operations in your actions. zephyr provides an well managed data access object which you can instantiate anytime. here is a example which creates a table in your database, then insert some records, then fetch them and finally return to your view. </p>
+	  <pre class="code">//viewreport.class.php
+
+&lt;?<br />class viewreport implements action
+{
+	public $params;
+	public function execute()
+	{
+		$dao = new DAO(); //instantiate Data Access Object
+		$dao->execute("create table students (name varchar(100))");
+
+		$dao->execute('insert into students values("ayesha")');
+		$dao->execute('insert into students values("didar")');
+		$dao->execute('insert into students values("shahana")');
+		$dao->execute('insert into students values("tipoo")');
+
+		$result = $dao->selectBySQL("select * from students");
+		$data = array("students"=>$result);
+		return array("view_file"=>"reports","data"=>$data);
+	}
+}<br />?&gt;</pre>
+      <p>Well, this action instantiate the DAO which actually connects to the sqlite database as specified in dbinfo. then it creates a table named &quot;<span class="hilight">students</span>&quot; and insert some data. finally, it fetch all records and pass them to &quot;<span class="hilight">reports</span>&quot; template as a variable named &quot;<span class="hilight">students</span>&quot; . lets look at our template reports.tpl which we must place inside &quot;view&quot; folder. this is a smarty template. </p>
+      <pre class="code">//reports.tpl
+&lt;h1&gt;All Students&lt;/h1&gt;<br />{foreach item=student from=$students name=std}<br />{$smarty.foreach.std.iteration}.{$student.name}&lt;br&gt;<br />{/foreach}</pre>
+      <p>so what is the output? lets take a look below. </p>
+      <p><img src="images/output1.gif" width="217" height="136" /></p>
+	</div>
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-supported database types-&gt;&gt;</h3>
+      <p>primarily we supply a limited version of adoDB with minimal drivers. so not every db will be supported by default. But if yo upgrade the default adoDB folder with your requirement, you will get complete support. Rightnow we are supporting only these drivers </p>
+      <p class="hl-comment">- MySQL<br />
+        - SQLite<br />
+        - Postgresql <br />
+        - MSSQL (Both ODBC and Normal)<br />
+        - ODBC<br />
+        - Oracle </p>
+      <p class="hl-comment">however, you can update the default adoDB installation with your requirement. adoDB is placed in \thirdparty\adodb folder inside the root directory of zephyr. </p>
+      <p><br />
+      </p>
+      </div>	
+	</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for actionloader.class.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file actionloader.class.php</h1>
+<p>Documentation is available at <a href="../Zephyr/_helper_actionloader_class_php.html">actionloader.class.php</a></p>
+<div class="src-code">
+<pre><ol><li><a name="a1"></a><span class="src-php">&lt;?</span></li>
+<li><a name="a2"></a><span class="src-doc">/**</span></li>
+<li><a name="a3"></a><span class="src-doc"> * common actionloader class, loads actions</span></li>
+<li><a name="a4"></a><span class="src-doc"> * </span></li>
+<li><a name="a5"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@author</span><span class="src-doc">         Hasin Hayder</span></li>
+<li><a name="a6"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@since</span><span class="src-doc">         13th April, 2006</span></li>
+<li><a name="a7"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@package</span><span class="src-doc">     Zephyr</span></li>
+<li><a name="a8"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@version</span><span class="src-doc">     Beta 2.0</span></li>
+<li><a name="a9"></a><span class="src-doc"> * </span><span class="src-doc-coretag">@copyright</span><span class="src-doc">     LGPL</span></li>
+<li><a name="a10"></a><span class="src-doc"> */</span></li>
+<li><a name="a11"></a>&nbsp;</li>
+<li><a name="a12"></a><a href="http://www.php.net/session_start">session_start</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a13"></a><span class="src-key">class </span><a href="../Zephyr/actionloader.html">actionloader</a></li>
+<li><a name="a14"></a><span class="src-sym">{</span></li>
+<li><a name="a15"></a>&nbsp;</li>
+<li><a name="a16"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a17"></a><span class="src-doc">     * This is the action name to load</span></li>
+<li><a name="a18"></a><span class="src-doc">     * used by constructor()</span></li>
+<li><a name="a19"></a><span class="src-doc">     *</span></li>
+<li><a name="a20"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc">    </span><span class="src-doc-type">string </span></li>
+<li><a name="a21"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@since</span><span class="src-doc">     1.0</span></li>
+<li><a name="a22"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc">     private</span></li>
+<li><a name="a23"></a><span class="src-doc">     */</span></li>
+<li><a name="a24"></a>    <span class="src-key">private </span><a href="../Zephyr/actionloader.html#var$action">$action</a><span class="src-sym">;</span></li>
+<li><a name="a25"></a>&nbsp;</li>
+<li><a name="a26"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a27"></a><span class="src-doc">     * This is the nameof view file</span></li>
+<li><a name="a28"></a><span class="src-doc">     *</span></li>
+<li><a name="a29"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc">    </span><span class="src-doc-type">string </span></li>
+<li><a name="a30"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@since</span><span class="src-doc">     1.0</span></li>
+<li><a name="a31"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc">     private</span></li>
+<li><a name="a32"></a><span class="src-doc">     */</span></li>
+<li><a name="a33"></a>    <span class="src-key">private </span><a href="../Zephyr/actionloader.html#var$view">$view</a><span class="src-sym">;</span></li>
+<li><a name="a34"></a>&nbsp;</li>
+<li><a name="a35"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a36"></a><span class="src-doc">     * this is the variable to determine whther this is an insert action or edit action</span></li>
+<li><a name="a37"></a><span class="src-doc">     * coz they will call different handlers.</span></li>
+<li><a name="a38"></a><span class="src-doc">     *</span></li>
+<li><a name="a39"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc">    </span><span class="src-doc-type">string </span></li>
+<li><a name="a40"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc">     private</span></li>
+<li><a name="a41"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@since</span><span class="src-doc">     1.1, 10th Nov, 05</span></li>
+<li><a name="a42"></a><span class="src-doc">     */</span></li>
+<li><a name="a43"></a>&nbsp;</li>
+<li><a name="a44"></a>    <span class="src-key">private </span><a href="../Zephyr/actionloader.html#var$command">$command</a><span class="src-sym">;</span></li>
+<li><a name="a45"></a>&nbsp;</li>
+<li><a name="a46"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a47"></a><span class="src-doc">     * this is the data array to pass to template via smarty engine</span></li>
+<li><a name="a48"></a><span class="src-doc">     *</span></li>
+<li><a name="a49"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc">    </span><span class="src-doc-type">array </span></li>
+<li><a name="a50"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc">     private</span></li>
+<li><a name="a51"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@since</span><span class="src-doc">     1.1, 10th Nov, 05</span></li>
+<li><a name="a52"></a><span class="src-doc">     */</span></li>
+<li><a name="a53"></a>&nbsp;</li>
+<li><a name="a54"></a>    <span class="src-key">private </span><a href="../Zephyr/actionloader.html#var$data">$data</a><span class="src-sym">;</span></li>
+<li><a name="a55"></a>&nbsp;</li>
+<li><a name="a56"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a57"></a><span class="src-doc">     * this is the incoming data from view file. necessary when some additional data are to pass to action</span></li>
+<li><a name="a58"></a><span class="src-doc">     * this may contain a serialized javascript array.</span></li>
+<li><a name="a59"></a><span class="src-doc">     *</span></li>
+<li><a name="a60"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc">    </span><span class="src-doc-type">string </span></li>
+<li><a name="a61"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc">     public</span></li>
+<li><a name="a62"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@since</span><span class="src-doc">     1.1, 10th Nov, 05</span></li>
+<li><a name="a63"></a><span class="src-doc">     */</span></li>
+<li><a name="a64"></a>&nbsp;</li>
+<li><a name="a65"></a>    <span class="src-key">public </span><a href="../Zephyr/actionloader.html#var$params">$params</a><span class="src-sym">;</span></li>
+<li><a name="a66"></a>&nbsp;</li>
+<li><a name="a67"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a68"></a><span class="src-doc">     * instance of smarty</span></li>
+<li><a name="a69"></a><span class="src-doc">     *</span></li>
+<li><a name="a70"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@var </span><span class="src-doc-type">object </span></li>
+<li><a name="a71"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> private</span></li>
+<li><a name="a72"></a><span class="src-doc">     */</span></li>
+<li><a name="a73"></a>    <span class="src-key">private </span><a href="../Zephyr/actionloader.html#var$temp_smarty">$temp_smarty</a><span class="src-sym">;</span></li>
+<li><a name="a74"></a>&nbsp;</li>
+<li><a name="a75"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a76"></a><span class="src-doc">     * PHP5 constructor</span></li>
+<li><a name="a77"></a><span class="src-doc">     * </span></li>
+<li><a name="a78"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@param </span><span class="src-doc"> </span><span class="src-doc-type">string </span><span class="src-doc-var">$action </span></li>
+<li><a name="a79"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span><span class="src-doc">rendered output</span></li>
+<li><a name="a80"></a><span class="src-doc">     */</span></li>
+<li><a name="a81"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../Zephyr/actionloader.html#method__construct">__construct</a><span class="src-sym">(</span><span class="src-var">$action</span><span class="src-sym">)</span></li>
+<li><a name="a82"></a>    <span class="src-sym">{</span></li>
+<li><a name="a83"></a>        <span class="src-comm">//echo $action;</span></li>
+<li><a name="a84"></a>        <span class="src-var">$pm </span>= <span class="src-key">new </span><span class="src-id"><a href="../Zephyr/packagemanager.html">packagemanager</a></span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a85"></a>        <span class="src-var">$action_file </span>= <span class="src-str">&quot;</span><span class="src-str">../<span class="src-id">packages</span>/{<span class="src-var">$pm</span></span><span class="src-sym">-&gt;</span><span class="src-id">get_base_path</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-str"></span><span class="src-sym">}</span>/<span class="src-id">actions</span>/{<span class="src-var">$action</span><span class="src-sym">}</span>.<span class="src-id">class</span>.<span class="src-id">php</span></span><span class="src-str">&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a86"></a>&nbsp;</li>
+<li><a name="a87"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-var">$action_file</span><span class="src-sym">))</span></li>
+<li><a name="a88"></a>        <span class="src-sym">{</span></li>
+<li><a name="a89"></a>            <span class="src-comm">// that means its an internal zephyr action</span></li>
+<li><a name="a90"></a>            <span class="src-var">$action_file </span>= <span class="src-str">&quot;</span><span class="src-str">../<span class="src-id">internal</span>/<span class="src-id">actions</span>/{<span class="src-var">$action</span><span class="src-sym">}</span>.<span class="src-id">class</span>.<span class="src-id">php</span></span><span class="src-str">&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a91"></a>        <span class="src-sym">}</span></li>
+<li><a name="a92"></a>        <span class="src-inc">require_once</span><span class="src-sym">(</span><span class="src-var">$action_file</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a93"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$action">action</a> = <span class="src-key">new </span><span class="src-var">$action</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a94"></a>&nbsp;</li>
+<li><a name="a95"></a>        <span class="src-comm">// instantiate a singleton of smarty</span></li>
+<li><a name="a96"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a> = <span class="src-id">smarty_x</span><span class="src-sym">::</span><span class="src-id">new_instance</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a97"></a>        <span class="src-comm">// override the smarty templates dir and compiled dir setting, coz its now loading from inside</span></li>
+<li><a name="a98"></a>        <span class="src-var">$temp_folder_path </span>= <span class="src-str">&quot;../temp/&quot;</span>.<span class="src-var">$pm</span><span class="src-sym">-&gt;</span><span class="src-id">get_base_path</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a99"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-sym">!</span><a href="http://www.php.net/file_exists">file_exists</a><span class="src-sym">(</span><span class="src-var">$temp_folder_path</span><span class="src-sym">))</span></li>
+<li><a name="a100"></a>        <span class="src-sym">{</span></li>
+<li><a name="a101"></a>            <a href="http://www.php.net/mkdir">mkdir</a><span class="src-sym">(</span><span class="src-var">$temp_folder_path</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a102"></a>        <span class="src-sym">}</span></li>
+<li><a name="a103"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">template_dir</span>=<span class="src-str">&quot;</span><span class="src-str">../<span class="src-id">packages</span>/{<span class="src-var">$pm</span></span><span class="src-sym">-&gt;</span><span class="src-id">get_base_path</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-str"></span><span class="src-sym">}</span>/<span class="src-id">views</span></span><span class="src-str">&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a104"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">compile_dir </span>= <span class="src-var">$temp_folder_path</span><span class="src-sym">;</span><span class="src-comm">//&quot;../temp&quot;;</span></li>
+<li><a name="a105"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-var">$pm</span><span class="src-sym">-&gt;</span><span class="src-id">use_smarty_plugin</span><span class="src-sym">(</span><span class="src-sym">))</span></li>
+<li><a name="a106"></a>        <span class="src-sym">{</span></li>
+<li><a name="a107"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">plugins_dir </span>= <span class="src-str">&quot;</span><span class="src-str">../<span class="src-id">packages</span>/{<span class="src-var">$pm</span></span><span class="src-sym">-&gt;</span><span class="src-id">get_base_path</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-str"></span><span class="src-sym">}</span>/<span class="src-id">plugins</span></span><span class="src-str">&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a108"></a>        <span class="src-sym">}</span></li>
+<li><a name="a109"></a>&nbsp;</li>
+<li><a name="a110"></a>        /**</li>
+<li><a name="a111"></a>         * a global smarty variable which is usable from every view</li>
+<li><a name="a112"></a>         * @since beta 1</li>
+<li><a name="a113"></a>         */</li>
+<li><a name="a114"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">assign</span><span class="src-sym">(</span><span class="src-str">&quot;base&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;packages/&quot;</span>.<span class="src-var">$pm</span><span class="src-sym">-&gt;</span><span class="src-id">get_base_path</span><span class="src-sym">(</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a115"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">assign</span><span class="src-sym">(</span><span class="src-str">&quot;images&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;packages/&quot;</span>.<span class="src-var">$pm</span><span class="src-sym">-&gt;</span><span class="src-id">get_base_path</span><span class="src-sym">(</span><span class="src-sym">)</span>.<span class="src-str">&quot;/images&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a116"></a>        </li>
+<li><a name="a117"></a>        /**</li>
+<li><a name="a118"></a>         * @version     1.0.2</li>
+<li><a name="a119"></a>         * @since         23rd March, 06</li>
+<li><a name="a120"></a>         */</li>
+<li><a name="a121"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">assign</span><span class="src-sym">(</span><span class="src-str">&quot;PACKAGE_ROOT&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;packages/&quot;</span>.<span class="src-var">$pm</span><span class="src-sym">-&gt;</span><span class="src-id">get_base_path</span><span class="src-sym">(</span><span class="src-sym">))</span><span class="src-sym">;</span></li>
+<li><a name="a122"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">assign</span><span class="src-sym">(</span><span class="src-str">&quot;IMAGES&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;packages/&quot;</span>.<span class="src-var">$pm</span><span class="src-sym">-&gt;</span><span class="src-id">get_base_path</span><span class="src-sym">(</span><span class="src-sym">)</span>.<span class="src-str">&quot;/images&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a123"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">assign</span><span class="src-sym">(</span><span class="src-str">&quot;STYLES&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;packages/&quot;</span>.<span class="src-var">$pm</span><span class="src-sym">-&gt;</span><span class="src-id">get_base_path</span><span class="src-sym">(</span><span class="src-sym">)</span>.<span class="src-str">&quot;/styles&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a124"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">assign</span><span class="src-sym">(</span><span class="src-str">&quot;SCRIPTS&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;packages/&quot;</span>.<span class="src-var">$pm</span><span class="src-sym">-&gt;</span><span class="src-id">get_base_path</span><span class="src-sym">(</span><span class="src-sym">)</span>.<span class="src-str">&quot;/javascripts&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a125"></a>    <span class="src-sym">}</span></li>
+<li><a name="a126"></a>&nbsp;</li>
+<li><a name="a127"></a>    <span class="src-doc">/**</span></li>
+<li><a name="a128"></a><span class="src-doc">     * function render()</span></li>
+<li><a name="a129"></a><span class="src-doc">     * this function renders the view and return the html</span></li>
+<li><a name="a130"></a><span class="src-doc">     * </span></li>
+<li><a name="a131"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@access</span><span class="src-doc"> public</span></li>
+<li><a name="a132"></a><span class="src-doc">     * </span><span class="src-doc-coretag">@return </span><span class="src-doc-type">string </span></li>
+<li><a name="a133"></a><span class="src-doc">     */</span></li>
+<li><a name="a134"></a>    <span class="src-key">public </span><span class="src-key">function </span><a href="../Zephyr/actionloader.html#methodrender">render</a><span class="src-sym">(</span><span class="src-sym">)</span></li>
+<li><a name="a135"></a>    <span class="src-sym">{</span></li>
+<li><a name="a136"></a>        <span class="src-comm">// asign the data to templates</span></li>
+<li><a name="a137"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">assign</span><span class="src-sym">(</span><span class="src-str">&quot;todo&quot;</span><span class="src-sym">, </span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$command">command</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a138"></a>        <span class="src-key">while </span><span class="src-sym">(</span>list<span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">,  </span><span class="src-var">$val</span><span class="src-sym">) </span>= <a href="http://www.php.net/each">each</a><span class="src-sym">(</span><span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$data">data</a><span class="src-sym">))</span></li>
+<li><a name="a139"></a>        <span class="src-sym">{</span></li>
+<li><a name="a140"></a>            <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">assign</span><span class="src-sym">(</span><span class="src-var">$key</span><span class="src-sym">, </span><span class="src-var">$val</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a141"></a>        <span class="src-sym">}</span></li>
+<li><a name="a142"></a>        <span class="src-comm">// perform the rendering</span></li>
+<li><a name="a143"></a>        <span class="src-var">$view </span>= <span class="src-str">&quot;</span>{<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$view">view</a><span class="src-sym">}</span>.<span class="src-id">tpl</span><span class="src-str"></span><span class="src-str">"</span><span class="src-sym">;</span></span></li>
+<li><a name="a144"></a></span><span class="src-str">        <span class="src-var">$view_path</span> = <span class="src-var">$this</span></span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">template_dir</span>.<span class="src-str">&quot;/&quot;</span>.<span class="src-var">$view</span><span class="src-sym">;</span></li>
+<li><a name="a145"></a>        <span class="src-key">if</span><span class="src-sym">(</span><span class="src-sym">!</span><span class="src-id">file_exists</span><span class="src-sym">(</span><span class="src-var">$view_path</span><span class="src-sym">))</span></li>
+<li><a name="a146"></a>        </span><span class="src-str"><span class="src-sym">{</span></span></li>
+<li><a name="a147"></a></span><span class="src-str">            <span class="src-comm">// it is an internal view, so grab it from /internal/views directory</span></span></li>
+<li><a name="a148"></a></span><span class="src-str">            <span class="src-var">$this</span></span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">template_dir</span>=<span class="src-str">&quot;../internal/views&quot;</span><span class="src-sym">;</span></li>
+<li><a name="a149"></a>        </span><span class="src-str"><span class="src-sym">}</span></span></li>
+<li><a name="a150"></a>&nbsp;</li>
+<li><a name="a151"></a>&nbsp;</li>
+<li><a name="a152"></a></span><span class="src-str">        <span class="src-var">$output</span> = <span class="src-var">$this</span></span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$temp_smarty">temp_smarty</a><span class="src-sym">-&gt;</span><span class="src-id">fetch</span><span class="src-sym">(</span><span class="src-var">$view</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a153"></a>        <span class="src-key">return </span><span class="src-var">$output</span><span class="src-sym">;</span></li>
+<li><a name="a154"></a>    </span><span class="src-str"><span class="src-sym">}</span></span></li>
+<li><a name="a155"></a>&nbsp;</li>
+<li><a name="a156"></a></span><span class="src-str">    /**</span></li>
+<li><a name="a157"></a></span><span class="src-str">     * this function process the action, sets additional input parameters and retrieve assignable data for smarty engine</span></li>
+<li><a name="a158"></a></span><span class="src-str">     *</span></li>
+<li><a name="a159"></a></span><span class="src-str">     * @access public    </span></li>
+<li><a name="a160"></a></span><span class="src-str">     * @return void</span></li>
+<li><a name="a161"></a></span><span class="src-str">     * @since 1.1, 10th Nov, 05</span></li>
+<li><a name="a162"></a></span><span class="src-str">     */</span></li>
+<li><a name="a163"></a>&nbsp;</li>
+<li><a name="a164"></a></span><span class="src-str">    <span class="src-key">public</span> <span class="src-key">function</span> <span class="src-id">process</span><span class="src-sym">(</span><span class="src-sym">)</span></span></li>
+<li><a name="a165"></a></span><span class="src-str">    <span class="src-sym">{</span></span></li>
+<li><a name="a166"></a></span><span class="src-str">        <span class="src-key">global</span> <span class="src-var">$_PARAMS</span><span class="src-sym">;</span></span></li>
+<li><a name="a167"></a></span><span class="src-str">        <span class="src-var">$__unserialized_params</span> = <span class="src-id">unserialize</span><span class="src-sym">(</span><span class="src-var">$this</span></span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$params">params</a><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a168"></a>        <span class="src-key">if </span><span class="src-sym">(</span><span class="src-id">is_array</span><span class="src-sym">(</span><span class="src-var">$__unserialized_params</span><span class="src-sym">))</span></li>
+<li><a name="a169"></a>        </span><span class="src-str"><span class="src-sym">{</span></span></li>
+<li><a name="a170"></a></span><span class="src-str">            <span class="src-var">$_PARAMS</span> = <span class="src-var">$__unserialized_params</span><span class="src-sym">;</span></span></li>
+<li><a name="a171"></a></span><span class="src-str">        <span class="src-sym">}</span></span></li>
+<li><a name="a172"></a></span><span class="src-str">        <span class="src-key">else</span></span></li>
+<li><a name="a173"></a></span><span class="src-str">        <span class="src-sym">{</span></span></li>
+<li><a name="a174"></a></span><span class="src-str">            <span class="src-var">$_PARAMS</span> = <span class="src-var">$this</span></span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$params">params</a><span class="src-sym">;</span></li>
+<li><a name="a175"></a>        </span><span class="src-str"><span class="src-sym">}</span></span></li>
+<li><a name="a176"></a></span><span class="src-str">        <span class="src-comm">// pass the extra input data to action object</span></span></li>
+<li><a name="a177"></a></span><span class="src-str">        <span class="src-var">$this</span></span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$action">action</a><span class="src-sym">-&gt;</span><span class="src-id">params</span>=<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$params">params</a><span class="src-sym">;</span></li>
+<li><a name="a178"></a>        <span class="src-comm">// get both action and command</span></li>
+<li><a name="a179"></a>        <span class="src-var">$view_command_data </span>= <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$action">action</a><span class="src-sym">-&gt;</span><span class="src-id">execute</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+<li><a name="a180"></a>        <span class="src-comm">// name of the view file</span></li>
+<li><a name="a181"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$view">view</a> = <span class="src-var">$view_command_data</span><span class="src-sym">[</span><span class="src-str">'view_file'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a182"></a>        <span class="src-comm">//the command to perform, either 'insert', 'update' or 'void'</span></li>
+<li><a name="a183"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$command">command</a> = <span class="src-var">$view_command_data</span><span class="src-sym">[</span><span class="src-str">'command'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a184"></a>        <span class="src-comm">// extra output data in an array</span></li>
+<li><a name="a185"></a>        <span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../Zephyr/actionloader.html#var$data">data</a> = <span class="src-var">$view_command_data</span><span class="src-sym">[</span><span class="src-str">'data'</span><span class="src-sym">]</span><span class="src-sym">;</span></li>
+<li><a name="a186"></a>    </span><span class="src-str"><span class="src-sym">}</span></span></li>
+<li><a name="a187"></a>&nbsp;</li>
+<li><a name="a188"></a></span><span class="src-str"><span class="src-sym">}</span></span></li>
+</ol></pre>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 15 Apr 2006 22:10:25 +0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</body>
+</html>

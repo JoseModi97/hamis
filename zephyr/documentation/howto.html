@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>How-To</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #1c1c1b;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	color: #EEEEEE;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+h3
+{
+	font-size: 18px;
+	margin-top: 7px;
+	color: #444444;
+}
+
+.text_container
+{
+	line-height:1.5em; 
+	padding: 5px; 
+	margin-top: 5px; 
+	padding-top: 0px;
+	border: 1px solid #BBBBBB;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+
+a:active
+{
+	color: #FFFF00;
+}
+
+a:visited:hover
+{
+	text-decoration: underline;
+	color: #EEEEEE;
+}
+
+a:visited
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+.code
+{
+	font-family: "Lucida Console";
+	font-size: 12px;
+	background-color:#EEEEEE !important;
+	padding: 10px;
+	border: 1px solid;
+	border-color:#CCCCCC ;
+	display: block;
+	color: #333333 !important;
+}
+.hilight {	color: #993300;
+}
+.hl-brackets {    color: Olive;
+}
+.hl-code {    color: Gray;
+}
+.hl-comment {    color: Orange;
+}
+.hl-identifier {    color: Blue;
+}
+.hl-inlinedoc {    color: Blue;
+}
+.hl-inlinetags {    color: Blue;
+}
+.hl-main {	font-size:14px;
+}
+.hl-quotes {    color: Darkred;
+}
+.hl-reserved {    color: Green;
+}
+.hl-string {    color: Red;
+}
+.hl-var {    color: Darkblue;
+}
+.php {	font-family: "Lucida Console";
+	background-color:#FFFFFF;
+	padding: 5px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+	height: 250px;
+	overflow: auto;
+}
+.code1 {	font-family: "Lucida Console";
+	font-size: 12px;
+	background-color:#CCFFCC;
+	padding: 10px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+}
+-->
+</style></head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <th colspan="2" scope="col"><div align="left"><img src="ZephyrBanner.jpg" width="520" /></div>      
+    <div align="left"></div></th>
+  </tr>
+  <tr>
+    <td width="23%" valign="top"  style="border-top: 1px solid #CCCCCC; padding-top: 0px;"  ><div align="left" style="padding-left:17px; line-height:1.5em;" >
+      <p><a href="index.html">Introduction</a><br />
+        <a href="installation.html">Installation</a><br />
+        <a href="gettingstarted.html">Getting started</a><br />
+        <a href="package.html">Package Definition Reference</a><br />
+        <a href="database.html">Connecting to Database<br />
+        </a><a href="commondb.html">Common DB Operations </a><br />
+        <a href="filter.html">Filter</a><a href="crud.html"></a><br />
+        <a href="multipledb.html">Handling Multiple Databases</a><br />
+        <a href="howto.html">How-Tos</a><br />
+        <a href="deployment.html">Deployment</a><br />
+        <a href="credit.html">Credit</a><br />
+        <a href="feedback.html">Feedback</a><br />
+        <a href="changelog.html">Changelog</a></p>
+      <p><a href="zephyrAPI/index.html">Zephyr API </a><br />
+        <br />
+      </p>
+    </div></td>
+    <td width="77%" valign="top" style="border-top: 1px solid #CCCCCC; padding-top: 0px;" >
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-executing javascript block returned in response text-&gt;&gt;</h3>
+      <p>by default, if an action returns some javascript block in response text, it will not be executed. if you want to execute script which is a part of your response text then you need to tell it to zephyr explicitely. for this, you need to invoke action using the load_action_smartly with an additional parameter. lets take a look at the following example</p>
+      <p class="code"> load_action_smartly(&quot;my_action&quot;,&quot;parameters_to_action&quot;,&quot;div_object_to_update&quot;,true) </p>
+	  <p>the optional fourth parameter indicates whether embedded javascript should be executed or not. here is a sample action which returns embedded javascript</p>
+	  <p class="code"> This is a sample view <br />
+&lt;script&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(&quot;hello - this script runs automatically&quot;);<br />
+&lt;/script&gt; </p>
+	</div>
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-cron action-&gt;&gt;</h3>
+      <p>cron actions are those action which executes at a regular interval. these actions are extremely usefull if you want to update a portion of your page automatically after a certain time. in zephyr, you can easily create such cron actions. to invoke an action as cron action use use run_cron_function() function, take a look at the following example.<br />
+        <br />
+        <span class="code">//a normal javascript function which invokes a server side action<br /> 
+        function myaction()<br />
+        {<br />
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;load_action_smartly(&quot;my_server_side_action&quot;,&quot;parameters&quot;,&quot;div_object_to_update&quot;);<br />
+        }</span></p>
+      <p>now we wiull set a cron action which invokes this javascript function (and that means - our server side action) after regular intervals. </p>
+      <p> <span class="code">run_cron_function(myaction, interval_in_milliseconds)) </span></p>
+      </div>
+	  <div>
+	  <h3>&lt;&lt;how to extend core zephyr classes&gt;&gt; </h3>
+      <p>Zephyr has a feature rich data access object class by which you can  perform different data operations, optionally with help of a data  domain model. To call MySQL aggregate functions like &ldquo;avg&rdquo;, &ldquo;min&rdquo;,  &ldquo;max&rdquo; and so forth, you can access it like this </p>
+      <p class="code">&lt;?<br />
+        class my_action implements action<br />
+        {<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public $params;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public function execute()<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$dao = new DAO();<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result = $dao-&gt;selecteBySQL(&ldquo;select max('field_name') <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;from table_name)&rdquo;);<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$max_value = $result[0][0];<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+        }<br />
+        ?&gt;</p>
+      <p> This process is easy enough and gives you the full control. But  zephyr's main goal is to provide an easy convenient way to perform  tasks. So how about if we extend our DAO class so that we can call  these aggregator functions in an easy way </p>
+      <p class="code">&lt;?<br />
+        class extendedDAO extends DAO<br />
+        {<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public function __construct(&amp;$model = null)<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parent::__construct($model);<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/**<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* this function call any aggregate function and return the result<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* @since &nbsp;preview release 6.00<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* @param &nbsp;string function name<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* @param &nbsp;array column names<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* @param &nbsp;table name<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* @param &nbsp;string where clause<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* @return string<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public function aggregator($function, $columns, $table, $condition=null)<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$where_clause = empty($condition)? null: &quot;where {$clause}&quot;;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$my_columns = implode(&quot;,&quot;, $columns);<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$query = &quot;select {$function}({$my_columns}) from {$table}<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$where_clause}&quot;;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$result = $this-&gt;selectBySQL($query);<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return $result[0][0];<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+        }<br />
+        ?&gt;</p>
+      <p>Save this class as &ldquo;extendedDAO.class.php&rdquo; in &ldquo;php&rdquo; folder under  your package directory. To use this class you must load it using  default PHP file loader feature for your package. In your package  definition, add the following line. </p>
+      <p class="code">&lt;php&gt;extendedDAO.class&lt;/php&gt; </p>
+      <p>Well, we are done. Now we can call any MySQL aggregator function  with the help of it. For example lets have a look at following example. </p>
+      <p class="code">&lt;php&gt;ex&lt;?<br />
+        class my_action implements action<br />
+        {<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public $params;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;public function execute()<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$xdao = new extendedDAO();<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$max_line = $xdao-&gt;aggregator(&ldquo;max&rdquo;,array(&rdquo;field_name&rdquo;),&rdquo;table_name&rdquo;);<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />
+        }<br />
+        ?&gt;</p>
+      <p>This example is much easier and user friendly than the previous one.  By the way, this is just an example how you can extend core <a href="http://zephyr-php.sourceforge.net/">Zephyr </a> classes for better functionality. From Zephyr  preview beta 1.00, DAO calss has this aggregator() function builtin. </p>
+
+	</div>
+		
+	  <div align="left" class = 'text_container'>
+        <h3>&lt;&lt;-use package initializer-&gt;&gt;</h3>
+	    <p>package initializers are special class which invoked only one time while initializing the package. you can use this package for initializing session for authentication or other preparatory tasks which you need to perform only once. </p>
+	    <p>package initializer must be named as &quot;<span class="hilight">initializer.class.php</span>&quot; and placed inside &quot;<span class="hilight">helper</span>&quot; folder. lets take a look at sample package initializer.		</p>
+	    <pre><p class="code">
+//initializer.class.php
+&lt;?
+class initializer 
+{
+	public function initiate()
+	{
+		echo "Package Initialized";
+	}
+}
+?></p></pre>
+	  </div>
+	  
+	  <div align="left" class = 'text_container'>
+        <h3>&lt;&lt;-calling another action from an action-&gt;&gt;</h3>
+	    <p>in zephyr actions you can easily invoke another action using load_action() function. lets take a look at the following example. you can pass arbitrary number of arguments to these functions. you can accept their return values. you must pass these parameters in a key value array </p>
+	    <p><span class="code">&lt;?<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;load_action(action_name, additional_param_array, accept_return_value); <br />
+?&gt;</span></p>
+	    <p>if you set third parameter to true, after executing this action, it will return the value to your calling procedure. </p>
+	  </div></td>
+  </tr>
+</table>
+</body>
+</html>

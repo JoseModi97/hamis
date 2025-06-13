@@ -1,0 +1,6 @@
+Malindi;50;FIRST;30.00;3,150.00
+Malindi;50;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;5,000.00
+Amount Payable: ;;;;5,000.00

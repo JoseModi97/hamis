@@ -1,0 +1,6 @@
+Maseno;M16;FIRST;26.00;2,730.00
+Narok;22;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;5,880.00
+Balance Brought  Forward ;;;;-302.00
+Amount Payable: ;;;;0.00

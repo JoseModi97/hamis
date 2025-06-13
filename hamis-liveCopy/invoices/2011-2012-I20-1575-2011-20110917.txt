@@ -1,0 +1,6 @@
+Prefabs 8;F813;FIRST;18.00;1,656.00
+Prefabs 8;F813;SECOND;18.00;1,890.00
+;;;;
+Total Invoice Amount: ;;;;3,546.00
+Balance Carried  Forward ;;;;3,546.00
+Amount Payable: ;;;;3,546.00

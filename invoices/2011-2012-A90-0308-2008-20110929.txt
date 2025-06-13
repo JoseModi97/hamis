@@ -1,0 +1,6 @@
+Tana B;53;FIRST;30.00;3,150.00
+Tana B;53;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;1,500.00
+Amount Payable: ;;;;1,500.00

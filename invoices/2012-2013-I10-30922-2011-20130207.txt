@@ -1,0 +1,5 @@
+Chiromo-f;DQR2L;FOREIGN;180.00;33,760.00
+;;;;
+Total Invoice Amount: ;;;;33,760.00
+Balance Carried  Forward ;;;;30,490.00
+Amount Payable: ;;;;30,490.00

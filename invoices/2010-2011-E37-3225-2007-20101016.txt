@@ -1,0 +1,5 @@
+Kstc 2;316;FIRST;26.00;3,276.00
+;;;;
+Total Invoice Amount: ;;;;3,276.00
+Balance Brought  Forward ;;;;-5,333.00
+Amount Payable: ;;;;-2,057.00

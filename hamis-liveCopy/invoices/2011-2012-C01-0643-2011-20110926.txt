@@ -1,0 +1,6 @@
+Womens Hall;B410;FIRST;28.00;3,136.00
+Womens Hall;B410;SECOND;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;6,076.00
+Balance Carried  Forward ;;;;1,076.00
+Amount Payable: ;;;;1,076.00

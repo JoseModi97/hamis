@@ -1,0 +1,6 @@
+Prefabs 2;F213;FIRST;18.00;1,638.00
+Prefabs 2;F213;SECOND;18.00;1,890.00
+;;;;
+Total Invoice Amount: ;;;;3,528.00
+Balance Brought  Forward ;;;;-5,000.00
+Amount Payable: ;;;;-1,472.00

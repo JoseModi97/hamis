@@ -1,0 +1,7 @@
+Wakulima;QRNG;FIRST;21.00;2,205.00
+Wakulima;QRNG;SECOND;21.00;2,205.00
+Wakulima;QRNG;THIRD;21.00;1,176.00
+;;;;
+Total Invoice Amount: ;;;;5,586.00
+Balance Brought  Forward ;;;;-4,083.00
+Amount Payable: ;;;;1,503.00

@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Package.xml Reference</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #1c1c1b;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	color: #EEEEEE;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+h3
+{
+	font-size: 18px;
+	margin-top: 7px;
+	color: #444444;
+}
+
+.text_container
+{
+	line-height:1.5em; 
+	padding: 5px; 
+	margin-top: 5px; 
+	padding-top: 0px;
+	border: 1px solid #BBBBBB;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+
+a:active
+{
+	color: #FFFF00;
+}
+
+a:visited:hover
+{
+	text-decoration: underline;
+	color: #EEEEEE;
+}
+
+a:visited
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+.code
+{
+	font-family: "Lucida Console";
+	font-size: 12px;
+	background-color: #EEEEEE !important;
+	padding: 10px;
+	border: 1px solid;
+	border-color:#CCCCCC ;
+	display: block;
+	color: #333333 !important;
+}
+.hilight {	color: #993300;
+}
+-->
+</style></head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <th colspan="2" scope="col"><div align="left"><img src="ZephyrBanner.jpg" width="520"  style="margin:0px" /></div>      <div align="left"></div></th>
+  </tr>
+  <tr>
+    <td width="23%" valign="top"  style="border-top: 1px solid #CCCCCC; padding-top: 0px;"  ><div align="left" style="padding-left:17px; line-height:1.5em; @margin-top:10px; " >
+      <p><a href="index.html">Introduction</a><br />
+        <a href="installation.html">Installation</a><br />
+        <a href="gettingstarted.html">Getting started</a><br />
+        <a href="package.html">Package Definition Reference</a><br />
+        <a href="database.html">Connecting to Database<br />
+        </a><a href="commondb.html">Common DB Operations </a><br />
+        <a href="filter.html">Filter</a><a href="crud.html"></a><br />
+        <a href="multipledb.html">Handling Multiple Databases</a><br />
+        <a href="howto.html">How-Tos</a><br />
+        <a href="deployment.html">Deployment</a><br />
+        <a href="credit.html">Credit</a><br />
+        <a href="feedback.html">Feedback</a><br />
+        <a href="changelog.html">Changelog</a></p>
+      <p><a href="zephyrAPI/index.html">Zephyr API </a><br />
+        <br />
+      </p>
+    </div></td>
+    <td width="77%" valign="top" style="border-top: 1px solid #CCCCCC; padding-top: 0px;" >
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-package.xml-&gt;&gt;</h3>
+	  <div id="test">
+      <p>package.xml is the main configuration file for a package. this file tells zephyr which actions to run first, what are the dependencies and which actions should runs everytime before executing another action. here is a complete package.xml file that runs with zephyr beta2. </p>
+      <pre><span class="code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;<br />&lt;package&gt;<br />    &lt;name&gt;my_package_name&lt;/name&gt;<br />    &lt;version&gt;package_version&lt;/version&gt;<br />    &lt;root_template&gt;std.tpl&lt;/root_template&gt;<br />    &lt;root_action&gt;home&lt;/root_action&gt;<br />    &lt;javascript&gt;std&lt;/javascript&gt;<br />    &lt;css&gt;std&lt;/css&gt;<br />    &lt;php&gt;std&lt;/php&gt;<br />    &lt;pre_action_processor&gt;preaction&lt;/pre_action_processor&gt;<br />&lt;/package&gt;</span></pre>
+      </p>
+	  </div>
+	</div>
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-package definition reference-&gt;&gt;</h3>
+	  <div id="test2">
+      <p><span class="code">&lt;name&gt;my_package_name&lt;/name&gt;</span></p>
+      <p>&lt;name&gt; is the title of your package. zephyr renders this setting and set as title for every page. this definition has no other effect. </p>
+      <p><span class="code">&lt;version&gt;package_version&lt;/version&gt;</span></p>
+      <p>version is the version number of your package. zephyr set it in title bar beside your package name. so if you package name is &quot;sample package&quot; and version is &quot;2.00&quot; then you will see &quot;sample package version 2.00&quot; in title bar everytime you run your package. </p>
+      <p><span class="code">&lt;root_template&gt;std.tpl&lt;/root_template&gt;</span></p>
+      <p>this is the template which zephyr runs when some one request your package without specifying any action explicitely. that means this template will be considered as your home page. but this definition is <span class="hilight">deprecated</span> from zephyr preview release 2.00. we strongly suggest to use &lt;root_action&gt; instead of &lt;root_template&gt; </p>
+      <p><span class="code">&lt;root_action&gt;home&lt;/root_action&gt;</span></p>
+      <p>this the action which runs first time when your package is requested without specifying any action. these actions must reside in &quot;packages/your_package/actions&quot; folder. </p>
+      <p><span class="code">&lt;javascript&gt;std&lt;/javascript&gt;<br />
+      &lt;javascript&gt;anotherscript&lt;/javascript&gt;<br />
+      &lt;javascript&gt;moreone&lt;/javascript&gt;</span></p>
+      <p>this is the javascript file name to include in your rendered template everytime. dont use any extension with this name. keep this javascript files inside &quot;<span class="hilight">javascript</span>&quot; folder in your package. you can use as many javascript you want to include. <span class="hilight">In zephyr version prior than Beta2, only one javascript file is supported. In Beta2, you can include as many as you want. </span></p>
+      <p><span class="code">&lt;css&gt;std&lt;/css&gt;</span></p>
+      <p>this is the css file to include in your rendered templates. dont use any extension with this file name. you have to place this css file inside &quot;<span class="hilight">styles</span>&quot; folder inside your package folder. zephyr currently supports only one css file at a time. </p>
+      <p><span class="code">&lt;php&gt;std&lt;/php&gt;<br />
+      &lt;php&gt;another_php_file&lt;/php&gt;<br />
+      &lt;php&gt;more_one&lt;/php&gt;</span></p>
+      <p>these are the user made php files to include. these files are extremely when you made some custom functions and want to use them inyou action files. when you specify these php files with &lt;php&gt; tag, zephyr includes them at the initial stage and all functions inside these filse are available to your actions. Prior that Beta2, you can include only one php file. But from Beta2, you can include as many php files as you want. these php files must be placed under &quot;<span class="hilight">php</span>&quot; folder inside your package folder. </p>
+      <p><span class="code">&lt;pre_action_processor&gt;preaction&lt;/pre_action_processor&gt;</span></p>
+      <p>pre_action_processor defines some action which will be run everytime before executing a normal action. this is extremely helpful if you want to run some valication, check session variable or check privilege before executing another action. pre processo actions and normal action, just you have to place them in &quot;<span class="hilight">helper</span>&quot; folder inside package folder. zephyr invokes its execute() method. if execute() returns true, normal action will run. other wise zephyr stops at that time and displays error_message of this pre action processor. following is a typical preaction processor. </p>
+      <pre><span class="code">&lt;?
+//preaction.class.php [place inside helper folder inside your package]
+class preaction implements action
+{
+	public $error_message;
+	
+	public function execute()
+	{
+        //process validations
+        //if validation fails     <br />		$this->error_message = "Pre Action validation fails";
+		return false;
+        //if validation ok then return true; 
+	}
+}
+?&gt;</span></pre>
+      <p>from Beta2 of zephyr, you can run as many pre_action_processors as you want.<br />
+      </p>
+	  </div>
+      </div>	</td>
+  </tr>
+  <tr>
+    <td valign="top"  style="border-top: 1px solid #CCCCCC; padding-top: 0px;"  >&nbsp;</td>
+    <td valign="top" style="border-top: 1px solid #CCCCCC; padding-top: 0px;" >&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>

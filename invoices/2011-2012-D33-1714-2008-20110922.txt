@@ -1,0 +1,6 @@
+Meru;1;FIRST;30.00;3,150.00
+Meru;1;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;5,505.00
+Amount Payable: ;;;;5,505.00

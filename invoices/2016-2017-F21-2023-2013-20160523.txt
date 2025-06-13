@@ -1,0 +1,7 @@
+Wakulima;QRQE;FIRST;21.00;2,205.00
+Wakulima;QRQE;SECOND;21.00;2,205.00
+Wakulima;QRQE;FOURTH;21.00;1,176.00
+;;;;
+Total Invoice Amount: ;;;;5,586.00
+Balance Carried  Forward ;;;;5,343.00
+Amount Payable: ;;;;5,343.00

@@ -1,0 +1,6 @@
+Kajiado;12;FIRST;30.00;3,120.00
+Maseno;M10;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,850.00
+Balance Carried  Forward ;;;;5,850.00
+Amount Payable: ;;;;5,850.00

@@ -1,0 +1,7 @@
+Mandela;B104;FOURTH;28.00;2,940.00
+Mandela;B104;FIRST;28.00;2,940.00
+Mandela;B104;SECOND;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;8,820.00
+Balance Carried  Forward ;;;;8,820.00
+Amount Payable: ;;;;8,820.00

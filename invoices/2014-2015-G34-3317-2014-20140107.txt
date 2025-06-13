@@ -1,0 +1,6 @@
+Block E;E06;FIRST;26.00;2,912.00
+Block E;E06;SECOND;26.00;2,782.00
+;;;;
+Total Invoice Amount: ;;;;5,694.00
+Balance Carried  Forward ;;;;5,694.00
+Amount Payable: ;;;;5,694.00

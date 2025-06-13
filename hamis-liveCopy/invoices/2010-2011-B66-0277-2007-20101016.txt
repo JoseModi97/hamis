@@ -1,0 +1,6 @@
+Mamlaka A;039;FIRST;28.00;2,940.00
+Mamlaka A;039;SECOND;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;5,880.00
+Balance Brought  Forward ;;;;-190.00
+Amount Payable: ;;;;5,690.00

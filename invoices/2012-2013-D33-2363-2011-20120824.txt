@@ -1,0 +1,6 @@
+Narok;FD;FIRST;30.00;3,210.00
+Narok;FD;SECOND;30.00;3,120.00
+;;;;
+Total Invoice Amount: ;;;;6,330.00
+Balance Carried  Forward ;;;;6,322.00
+Amount Payable: ;;;;6,322.00

@@ -1,0 +1,6 @@
+Soweto Female (kmsh);9;FIRST;29.00;3,045.00
+Soweto Female (kmsh);9;SECOND;29.00;3,045.00
+;;;;
+Total Invoice Amount: ;;;;6,090.00
+Balance Brought  Forward ;;;;-40.00
+Amount Payable: ;;;;0.00

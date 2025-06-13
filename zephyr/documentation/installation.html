@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Installation</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #1c1c1b;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	color: #EEEEEE;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+h3
+{
+	font-size: 18px;
+	margin-top: 7px;
+	color: #444444;
+}
+
+.text_container
+{
+	line-height:1.5em; 
+	padding: 5px; 
+	margin-top: 5px; 
+	padding-top: 0px;
+	border: 1px solid #BBBBBB;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+
+a:active
+{
+	color: #FFFF00;
+}
+
+a:visited:hover
+{
+	text-decoration: underline;
+	color: #EEEEEE;
+}
+
+a:visited
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+
+.hilight
+{
+	color: #993300;
+}
+
+.code
+{
+	font-family: "Lucida Console";
+	font-size: 12px;
+	background-color: #EEEEEE !important;
+	padding: 10px;
+	border: 1px solid;
+	border-color:#CCCCCC ;
+	display: block;
+	color: #333333 !important;
+}
+.php
+{
+	font-family: "Lucida Console";
+	background-color:#FFFFFF;
+	padding: 5px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+	height: 250px;
+	overflow: auto;
+}
+.php2
+{
+	font-family: "Lucida Console";
+	background-color:#FFFFFF;
+	padding: 5px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+	overflow: auto;
+}
+-->
+</style></head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <th colspan="2" scope="col"><div align="left"><img src="ZephyrBanner.jpg" width="520" /></div>      
+    <div align="left"></div></th>
+  </tr>
+  <tr>
+    <td width="23%" valign="top"  style="border-top: 1px solid #CCCCCC; padding-top: 0px;"  ><div align="left" style="padding-left:17px; line-height:1.5em; @margin-top:10px;" >
+      <p><a href="index.html">Introduction</a><br />
+        <a href="installation.html">Installation</a><br />
+        <a href="gettingstarted.html">Getting started</a><br />
+        <a href="package.html">Package Definition Reference</a><br />
+        <a href="database.html">Connecting to Database</a><br />
+        <a href="commondb.html">Common DB Operations </a><br />
+        <a href="filter.html">Filter</a><a href="crud.html"></a><a href="crud.html"></a><br />
+        <a href="multipledb.html">Handling Multiple Databases</a><br />
+        <a href="howto.html">How-Tos</a><br />
+        <a href="deployment.html">Deployment</a><br />
+        <a href="credit.html">Credit</a><br />
+        <a href="feedback.html">Feedback</a><br />
+        <a href="changelog.html">Changelog</a></p>
+      <p><a href="zephyrAPI/index.html">Zephyr API </a><br />
+        <br />
+      </p>
+    </div></td>
+    <td width="77%" valign="top" style="border-top: 1px solid #CCCCCC; padding-top: 0px;" >
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-installation-&gt;&gt;</h3>
+      <p>download zephyr from : <a href="http://sourceforge.net/project/showfiles.php?group_id=151993" target="_blank" style="text-decoration:underline" >sourceforge</a> </p>
+      <p>installation of zephyr is a easy. just download the zephyr package and unzip it in   document root of your webserver(or wherever you want), then change permission of the &quot;temp&quot; folder to &quot;0777&quot; or &quot;rwxrwxrwx&quot;. thats it. a typical zephyr folder will look like this </p>
+      <p><div class="code">
+        <p>- zephyr <br />
+  &nbsp;&nbsp;|&nbsp;+ abstract<br />
+  &nbsp;&nbsp;|&nbsp;+ documentation <br />
+  &nbsp;&nbsp;|&nbsp;+ functions<br />
+  &nbsp;&nbsp;|&nbsp;+ helper<br />
+  &nbsp;&nbsp;|&nbsp;+ images <br />
+  &nbsp;&nbsp;|&nbsp;+ interfaces<br />
+  &nbsp;&nbsp;|&nbsp;+ internal<br />
+  &nbsp;&nbsp;|&nbsp;+ javascript<br />
+  &nbsp;&nbsp;|&nbsp;+ packages<br />
+  &nbsp;&nbsp;|&nbsp;+ temp<br />
+  &nbsp;&nbsp;|&nbsp;+ thirdparty<br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;  .htaccess <br />
+  &nbsp;&nbsp;|&nbsp;&nbsp; index.php</p>
+        </div>
+		<p>zephyr comes with a minimal installation of adoDB with following drivers</p>
+		<p>- MySQL<br />
+		  - SQLite<br />
+		  - Postgresql
+         </p>
+	</div>
+	</td>
+  </tr>
+</table>
+</body>
+</html>

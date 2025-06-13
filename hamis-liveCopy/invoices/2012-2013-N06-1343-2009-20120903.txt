@@ -1,0 +1,6 @@
+Tom Mboya;102;FIRST;30.00;2,520.00
+Tom Mboya;102;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;5,670.00
+Balance Carried  Forward ;;;;4,046.00
+Amount Payable: ;;;;4,046.00

@@ -1,0 +1,6 @@
+Block D Female (kmsh);31;FIRST;30.00;5,220.00
+Block D Female (kmsh);31;SECOND;30.00;2,280.00
+;;;;
+Total Invoice Amount: ;;;;7,500.00
+Balance Carried  Forward ;;;;9,677.00
+Amount Payable: ;;;;9,677.00

@@ -1,0 +1,7 @@
+Mandela;A112;FIRST;28.00;2,940.00
+Mandela;A112;SECOND;28.00;2,940.00
+Mandela;A112;THIRD;28.00;1,568.00
+;;;;
+Total Invoice Amount: ;;;;7,448.00
+Balance Carried  Forward ;;;;1,148.00
+Amount Payable: ;;;;8,596.00

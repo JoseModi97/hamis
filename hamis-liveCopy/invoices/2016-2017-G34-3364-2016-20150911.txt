@@ -1,0 +1,6 @@
+Block C;C05;FIRST;26.00;2,730.00
+Block C;C05;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,460.00
+Balance Carried  Forward ;;;;5,460.00
+Amount Payable: ;;;;5,460.00

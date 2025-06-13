@@ -1,0 +1,6 @@
+Stella Awinja;407;FIRST;26.00;2,912.00
+Stella Awinja;407;SECOND;26.00;2,704.00
+;;;;
+Total Invoice Amount: ;;;;5,616.00
+Balance Carried  Forward ;;;;3,096.00
+Amount Payable: ;;;;3,096.00

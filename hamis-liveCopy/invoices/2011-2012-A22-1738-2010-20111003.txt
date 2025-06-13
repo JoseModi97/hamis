@@ -1,0 +1,6 @@
+Soweto Blocks;12;FIRST;18.00;1,890.00
+Soweto Blocks;12;SECOND;18.00;1,890.00
+;;;;
+Total Invoice Amount: ;;;;3,780.00
+Balance Brought  Forward ;;;;-214.00
+Amount Payable: ;;;;0.00

@@ -1,0 +1,6 @@
+Pioneer 2-7;2_24;FIRST;30.00;3,150.00
+Pioneer 2-7;2_24;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;6,307.00
+Amount Payable: ;;;;6,307.00

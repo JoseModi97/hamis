@@ -1,0 +1,6 @@
+Stella Awinja;SR 4;SECOND;29.00;3,045.00
+Nyerere;417;FIRST;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;5,250.00
+Balance Carried  Forward ;;;;0.00
+Amount Payable: ;;;;0.00

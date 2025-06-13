@@ -1,0 +1,6 @@
+Chiromo-f;D301;FIRST;30.00;3,150.00
+Chiromo-f;D301;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;5,940.00
+Amount Payable: ;;;;5,940.00

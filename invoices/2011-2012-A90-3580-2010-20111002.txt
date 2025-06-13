@@ -1,0 +1,6 @@
+Tana C;2_28;FIRST;26.00;2,730.00
+Tana C;2_28;SECOND;26.00;2,756.00
+;;;;
+Total Invoice Amount: ;;;;5,486.00
+Balance Brought  Forward ;;;;-108.00
+Amount Payable: ;;;;0.00

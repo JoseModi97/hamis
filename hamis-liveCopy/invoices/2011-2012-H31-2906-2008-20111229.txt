@@ -1,0 +1,6 @@
+Block C Female (kmsh);214;FIRST;30.00;4,620.00
+Block C Female (kmsh);214;SECOND;30.00;4,620.00
+;;;;
+Total Invoice Amount: ;;;;9,240.00
+Balance Carried  Forward ;;;;7,648.00
+Amount Payable: ;;;;7,648.00

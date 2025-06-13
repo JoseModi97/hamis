@@ -1,0 +1,6 @@
+Nile;112;FIRST;21.00;2,205.00
+Womens Hall;A109;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;4,935.00
+Balance Brought  Forward ;;;;-93.00
+Amount Payable: ;;;;0.00

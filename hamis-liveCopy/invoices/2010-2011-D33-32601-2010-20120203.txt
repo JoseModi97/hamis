@@ -1,0 +1,5 @@
+Meru;7;FOREIGN;150.00;12,150.00
+;;;;
+Total Invoice Amount: ;;;;12,150.00
+Balance Brought  Forward ;;;;-19,150.00
+Amount Payable: ;;;;0.00

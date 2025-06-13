@@ -1,0 +1,6 @@
+Elgon;200;FIRST;21.00;2,352.00
+Elgon;200;SECOND;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;4,557.00
+Balance Brought  Forward ;;;;-4,116.00
+Amount Payable: ;;;;441.00

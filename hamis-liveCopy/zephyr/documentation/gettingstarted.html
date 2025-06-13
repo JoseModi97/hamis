@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Getting Started</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #1c1c1b;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	color: #EEEEEE;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	scrollbars: yes;
+}
+
+h3
+{
+	font-size: 18px;
+	margin-top: 7px;
+	color: #444444;
+}
+
+.text_container
+{
+	line-height:1.5em; 
+	padding: 5px; 
+	margin-top: 5px; 
+	padding-top: 0px;
+	border: 1px solid #BBBBBB;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+
+a:active
+{
+	color: #FFFF00;
+}
+
+a:visited:hover
+{
+	text-decoration: underline;
+	color: #EEEEEE;
+}
+
+a:visited
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+.code
+{
+	font-family: "Lucida Console";
+	font-size: 12px;
+	background-color:#EEEEEE !important;
+	padding: 10px;
+	border: 1px solid;
+	border-color:#CCCCCC ;
+	display: block;
+	color: #333333 !important;
+}
+.hilight {	color: #993300;
+}
+.hl-brackets {    color: Olive;
+}
+.hl-code {    color: Gray;
+}
+.hl-comment {    color: Orange;
+}
+.hl-identifier {    color: Blue;
+}
+.hl-inlinedoc {    color: Blue;
+}
+.hl-inlinetags {    color: Blue;
+}
+.hl-main {	font-size:14px;
+}
+.hl-quotes {    color: Darkred;
+}
+.hl-reserved {    color: Green;
+}
+.hl-string {    color: Red;
+}
+.hl-var {    color: Darkblue;
+}
+.php {	font-family: "Lucida Console";
+	background-color:#FFFFFF;
+	padding: 5px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+	height: 250px;
+	overflow: auto;
+}
+-->
+</style></head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <th colspan="2" scope="col"><div align="left"><img src="ZephyrBanner.jpg" width="520" /></div>      <div align="left"></div></th>
+  </tr>
+  <tr>
+    <td width="23%" valign="top"  style="border-top: 1px solid #CCCCCC; padding-top: 0px;"  ><div align="left" style="padding-left:17px; line-height:1.5em; @margin-top:10px; " >
+      <p><a href="index.html">Introduction</a><br />
+        <a href="installation.html">Installation</a><br />
+        <a href="gettingstarted.html">Getting started</a><br />
+        <a href="package.html">Package Definition Reference</a><br />
+        <a href="database.html">Connecting to Database</a><br />
+        <a href="commondb.html">Common DB Operations </a><br />
+        <a href="filter.html">Filter</a><a href="crud.html"></a><br />
+        <a href="multipledb.html">Handling Multiple Databases</a><br />
+        <a href="howto.html">How-Tos</a><br />
+        <a href="deployment.html">Deployment</a><br />
+        <a href="credit.html">Credit</a><br />
+        <a href="feedback.html">Feedback</a><br />
+        <a href="changelog.html">Changelog</a></p>
+      <p><a href="zephyrAPI/index.html">Zephyr API </a><br />
+        <br />
+      </p>
+    </div></td>
+    <td width="77%" valign="top" style="border-top: 1px solid #CCCCCC; padding-top: 0px;" >
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-getting started-&gt;&gt;</h3>
+	  <div id="test">
+      <p>all the packages in zephyr resides on &quot;<span class='hilight'>packages</span>&quot; folder. so if you want to develop a new package, just give it a name and create a folder in this folder as &quot;<span class="hilight">packagename</span>&quot;. let me explaint it a bit more. here is the folder structure </p>
+      <p><span class="code">- zephyr <br />
+  &nbsp;&nbsp;|&nbsp;- packages<br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;+ packagename </span></p>
+      <p>after creating you package, you can create your package definition which is just a small xml file decribes your package. zephyr depend on this package definition to find which template it would run as a home page and which other files are bound to this packages, specially javascript, css and custom php functions. we will discuss about managing packages later. for now, just see a sample package definition. </p>
+      <p><span class='code'>&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;<br />
+  &lt;package&gt;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;zephyr&lt;/name&gt;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;1.00&lt;/version&gt;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;root_action&gt;home&lt;/root_action&gt;<br />
+  &lt;/package&gt;</span></p>
+      <p>well, i am not going to cover them in detail, just FYI, the &quot;<span class="hilight">&lt;root_action&gt;</span>&quot; is the first action that will be executed when someone requested a package. this is something similar to your package &quot;<span class="hilight">homepage</span>&quot;.  </p>
+      <p>you will get a complete definition under &quot;<a href="package.html" style="text-decoration:underline" >package definition reference</a>&quot; section </p>
+	  </div>
+	</div>
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-the classic &quot;<span class="hilight">hello world</span>&quot; application-&gt;&gt;</h3>
+	  <div id="test2">
+      <p>this is a small ajax application which says &quot;<span class="hilight">hello world</span>&quot; in any desired <span class="hilight">&lt;div&gt;</span> in the current page. frst create a golder name &quot;hello_world&quot; under packages folder. </p>
+      <p><span class="code">- zephyr <br />
+  &nbsp;&nbsp;|&nbsp;- packages<br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;- hello_world </span></p>
+      <p>now  start creating the package definition. here is the sample file. </p>
+      <p><span class='code'>&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;<br />
+  &lt;package&gt;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;hello_worldr&lt;/name&gt;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;1.00&lt;/version&gt;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;root_action&gt;home&lt;/root_action&gt;<br />
+  &lt;/package&gt;</span></p>
+      <p>now create two seperate folde in your &quot;<span class="hilight">hello_world</span>&quot;. one of them is &quot;<span class="hilight">actions</span>&quot; which contains all the action necessary for your package, second is &quot;<span class="hilight">views</span>&quot; which contains the viewes [or templates to render]. lets see the folder structure for your first application. </p>
+      <p><span class="code">- zephyr <br />
+  &nbsp;&nbsp;|&nbsp;- packages<br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;- hello_world <br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;+ actions<br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;+ views </span></p>
+      <p>now we will create our first action &quot;<span class="hilight">home</span>&quot; which will be executed as a default action. this action will return the template &quot;hello.tpl&quot; to our controller. zephyrcontroller will then render this template file and display output.      </p>
+      <pre><span class="code">&lt;?<br />//home.class.php
+class home implements action
+{
+	public $params;	
+	public function execute()
+	{
+		return array("view_file"=hello");
+	}
+	
+	public function get_view()
+	{
+		
+	}
+}
+?&gt;
+</span></pre>
+      </p>
+      now we have  to create two template file. one is &quot;<span class="hilight">hello.tpl</span>&quot; as package homepage and another is a &quot;<span class="hilight">messages.tpl</span>&quot; for rendering the message and return to your action. lets see the &quot;<span class="hilight">hello.tpl</span>&quot;...
+      <p><span class="code"><br />
+  &lt;h2 align='center'&gt;Welcome to zephyr&lt;/h1&gt;<br />
+  &lt;div id='results'&gt; This is your primary content &lt;/div&gt;&lt;br /&gt;<br />
+  &lt;input type='button' value=&quot;Click me&quot; onclick='load_action_smartly(&quot;display_message&quot;,&quot;Hello world&quot;,&quot;results&quot;);'/&gt; <br />
+      </span></p>
+      <p>this file has one <span class="hilight">&lt;div&gt;</span> object in which our message &quot;<span class="hilight">hello world</span>&quot; will be loaded dynamically. look at the button, it calls a builtin function &quot;<span class="hilight">load_action_smartly()</span>&quot;. when someone clicked on this button, the action &quot;<span class="hilight">display_message</span>&quot; will be invoked with one additional parameter message, here it is &quot;<span class="hilight">Hello World</span>&quot;. the third parameter is the name of <span class="hilight">&lt;div&gt;</span> object in which the result of &quot;<span class="hilight">display_message</span>&quot; action will be shown dynamically. lets create the action  &quot;<span class="hilight">display_message</span>&quot;. </p>
+      <p> </p>
+      <div class="hl-main">
+        <pre><span class="code">&lt;?<br />//display_message.class.php
+class display_message implements  action {
+/**
+ * this variable stores incoming data as a serialized object
+ *
+ * @var 	string
+ * @access 	public
+ * @since 	1.0
+ */
+
+	public $params ;
+
+	public function execute()
+	{
+		$data = array(&quot;message&quot;=&gt;$this-&gt;params);
+		return array(&quot;view_file&quot;=&gt;&quot;messages&quot;, &quot;command&quot;=&gt;&quot;void&quot;, &quot;data&quot;=&gt;$data);
+	}
+
+//this method is removed from action.interface.php in beta1
+//if you use zephyr prior to beta 1, you have to include this method. In beta 1, it is not needed. 
+	public function get_view()
+	{
+	}
+}
+?&gt;</span></pre>
+      </div>
+      </p>
+      <p> well this is a typical action handler. here out incoming data &quot;hello world&quot; has been passed as &quot;<span class="hilight">$params</span>&quot;. we capture it and pass to &quot;<span class="hilight">messages.tpl</span>&quot; via this line.</p>
+      <p><span class="code"> $data = array(&quot;message&quot;=&gt;$this-&gt;params);<br />
+        return array(&quot;view_file&quot;=&gt;&quot;messages&quot;, &quot;command&quot;=&gt;&quot;void&quot;, &quot;data&quot;=&gt;$data);</span></p>
+      <p>so the &quot;<span class="hilight">messages.tpl</span>&quot; will be invoked automatically with smarty variable <span class="hilight">{$message}</span> as we defined in data array. lets have a look at &quot;<span class="hilight">messages.tpl</span>&quot;. </p>
+      <p><span class="code">{$message}</span></p>
+      <p>lets look at the directory structure finally. </p>
+      <p><span class="code">- zephyr <br />
+  &nbsp;&nbsp;|&nbsp;- packages<br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;- hello_world <br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;- actions<br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;| display_message.class.php<br />
+&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;| home.class.php<br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;- views <br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;| hello.tpl <br />
+  &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;| message.tpl </span></p>
+      <p>now run your application with following url</p>
+      <p><span class="code">http://localhost/zephyr/index.php?package=hello_world</span></p>
+      <p>here are the screenshots </p>
+      <p><img src="images/first_app.gif" width="528" height="298" /></p>
+	  <p><img src="images/first_app2.gif" width="528" height="298" /></p>
+	  </div>
+	</div>	</td>
+  </tr>
+</table>
+</body>
+</html>

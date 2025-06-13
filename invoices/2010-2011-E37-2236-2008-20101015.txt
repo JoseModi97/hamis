@@ -1,0 +1,6 @@
+Kstc 4 Male;101;FIRST;26.00;2,730.00
+Kstc 4 Male;101;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,460.00
+Balance Brought  Forward ;;;;-5,482.00
+Amount Payable: ;;;;-22.00

@@ -1,0 +1,6 @@
+Ngala;103;SECOND;28.00;2,940.00
+Womens Hall;LINB;FIRST;30.00;2,520.00
+;;;;
+Total Invoice Amount: ;;;;5,460.00
+Balance Carried  Forward ;;;;5,452.00
+Amount Payable: ;;;;5,452.00

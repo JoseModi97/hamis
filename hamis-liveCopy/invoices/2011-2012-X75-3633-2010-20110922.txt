@@ -1,0 +1,6 @@
+Jamhuri;QR7;SECOND;21.00;2,205.00
+Jamhuri;QR11;FIRST;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;5,355.00
+Balance Carried  Forward ;;;;5,311.00
+Amount Payable: ;;;;5,311.00

@@ -1,0 +1,6 @@
+Nile;302;FIRST;21.00;2,205.00
+Nile;302;SECOND;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;4,410.00
+Balance Carried  Forward ;;;;4,410.00
+Amount Payable: ;;;;4,410.00

@@ -1,0 +1,5 @@
+Kstc 3;103;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;2,730.00
+Balance Carried  Forward ;;;;2,642.00
+Amount Payable: ;;;;2,642.00

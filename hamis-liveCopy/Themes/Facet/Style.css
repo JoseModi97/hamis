@@ -1,0 +1,84 @@
+/* Facet CCSTheme */
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+.FacetPageBODY { }
+.FacetFormTABLE{ border: solid 1px #000000; }
+.FacetFormHeaderFont{ color: #000000; font-size: 16px; font-weight: regular; }
+.FacetColumnTDSeperator{
+	color: #000000;
+	font-size: 16px;
+	font-weight: regular;
+	border-top-width: 0px;
+	border-top-style: none;
+	border-bottom-style: solid;
+	border-top-color: #0033CC;
+	border-right-color: #D4D0C8;
+	border-bottom-color: #0000FF;
+}
+.FacetFieldCaptionTD { background-color: #EBE9E5; color: #726C5D; font-size: 13px; }
+.FacetDataTD { background-color: #EFEFEF; color: #000000; font-size: 10px; }
+.FacetErrorTD {
+	background-color: #EFEFEF;
+	color: #FF0033;
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+}
+.FacetColumnTD { color: #504C43; background-color: #E5E1D7; font-size: 13px; }
+.FacetAltDataTD { background-color: #F6F6F6; color: #000000; font-size: 13px; }
+.FacetSeparatorTD { height: 1px; background-color: #C2BEB4; }
+.FacetFooterTD{ background-color: #EBE9E5; color: #726C5D; font-size: 13px; }
+a.FacetSorterLink:link,a.FacetSorterLink:visited{ color: #504C43; font-size: 13px; text-decoration: underline; }
+a.FacetSorterLink:hover,a.FacetSorterLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+a.FacetDataLink:link,a.FacetDataLink:visited{ color: #504C43; font-size: 13px; text-decoration: underline; }
+a.FacetDataLink:hover,a.FacetDataLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+a.FacetNavigatorLink:link,a.FacetNavigatorLink:visited{ color: #504C43; text-decoration: underline; }
+a.FacetNavigatorLink:hover,a.FacetNavigatorLink:active{ color: #000000; text-decoration: none; }
+.FacetButton { border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; border-bottom: 1px solid #000000; background-color: #EFEFEF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.FacetInput { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #FFFFFF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.FacetTextarea { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #FFFFFF; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.FacetSelect { font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+.FacetColumnTDsmis_Print {
+	color: #504C43;
+	font-size: 10px;
+	border-top: 0px solid #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 0px solid #999999;
+	border-left: 0px solid #999999;
+}
+.FacetFormTABLE_PRINT{ border: solid 0px #000000; }
+.FacetDataTDsmis {
+	color: #000000;
+	font-size: 10px;
+	border-top: 0px solid #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	border-left: none #999999;
+}
+.FacetFieldCaptionTDSmis {
+	color: #000000;
+	font-size: 13px;
+	border: 1px solid #999999;
+}
+.FacetDataTDsmisLabel {
+	color: #FF00CC;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.FacetColumnTDsmis_Print{
+	color: #504C43;
+	font-size: 12px;
+	border-top: 0px solid #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	border-left: 0px solid #999999;
+}
+.FacetDataTDsmis_print {
+	color: #000000;
+	font-size: 12px;
+	border-top: 0px solid #999999;
+	border-right: 0px solid #999999;
+	border-bottom: 1px solid #999999;
+	border-left: none #999999;
+}
+.FacetFormHeaderFont_print{ color: #000000; font-size: 18px; font-weight: regular; }

@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class packagemanager</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class packagemanager</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">packagemanager.</p>
+<p class="description"><p>packagemanager.class.php this class loads all the package informations and defines the action path this really helps deploying applications in zephyr and also seperate applications totally from the main zephyr engine</p></p>
+	<ul class="tags">
+				<li><span class="field">copyright:</span> LGPL</li>
+				<li><span class="field">version:</span> Beta 2.0</li>
+				<li><span class="field">since:</span> 13th April, 2006</li>
+				<li><span class="field">author:</span> Hasin Hayder</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_helper_packagemanager_class_php.html">/helper/packagemanager.class.php</a> (line <span class="field"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a15">15</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+											<span class="method-result"><a href="../Zephyr/packagemanager.html">packagemanager</a></span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type">string</span>&nbsp;<span class="var-name">$package</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$logout</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_base_path" title="details" class="method-name">get_base_path</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_input_filters" title="details" class="method-name">get_input_filters</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_javascript" title="details" class="method-name">get_javascript</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_output_filters" title="details" class="method-name">get_output_filters</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_package_path" title="details" class="method-name">get_package_path</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_pear_packages" title="details" class="method-name">get_pear_packages</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_php" title="details" class="method-name">get_php</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_pre_action_processor" title="details" class="method-name">get_pre_action_processor</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_root_action" title="details" class="method-name">get_root_action</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_root_template" title="details" class="method-name">get_root_template</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_stylesheet" title="details" class="method-name">get_stylesheet</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_title" title="details" class="method-name">get_title</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_version" title="details" class="method-name">get_version</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#is_compile_required" title="details" class="method-name">is_compile_required</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#require_jscalendar" title="details" class="method-name">require_jscalendar</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#require_overlib" title="details" class="method-name">require_overlib</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">boolean</span>
+										<a href="#use_smarty_plugin" title="details" class="method-name">use_smarty_plugin</a>
+										()
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a23">23</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">constructor</p>
+<p class="description"><p>constructor</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../Zephyr/packagemanager.html">packagemanager</a></span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type">string</span>&nbsp;<span class="var-name">$package</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$logout</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$package</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_base_path" id="get_base_path"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_base_path</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a175">175</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return the base path for this application</p>
+<p class="description"><p>return the base path for this application</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_base_path
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_input_filters" id="get_input_filters"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_input_filters</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a124">124</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return the input filters in a &quot;:&quot; delimited string</p>
+<p class="description"><p>return the input filters in a &quot;:&quot; delimited string</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_input_filters
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_javascript" id="get_javascript"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_javascript</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a186">186</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return the base path for this application</p>
+<p class="description"><p>return the base path for this application</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_javascript
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_output_filters" id="get_output_filters"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_output_filters</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a135">135</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return the output filters in a &quot;:&quot; delimited string</p>
+<p class="description"><p>return the output filters in a &quot;:&quot; delimited string</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_output_filters
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_package_path" id="get_package_path"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_package_path</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a293">293</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return the physical path of current package</p>
+<p class="description"><p>return the physical path of current package this is extremely usefull when you want to manipulate file specially sqlite database at the current package context</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">since:</span> beta 2.0</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_package_path
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_pear_packages" id="get_pear_packages"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_pear_packages</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a270">270</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return pear packages</p>
+<p class="description"><p>return pear packages</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_pear_packages
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_php" id="get_php"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_php</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a260">260</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return user defined php script</p>
+<p class="description"><p>return user defined php script</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_php
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_pre_action_processor" id="get_pre_action_processor"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_pre_action_processor</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a163">163</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return the name of pre_action_processor class because we must call it's execute method before loading any action this is extremely usefull when something have to be done before an action loads. true then action loader will load the desired action. die with a custom error message provided by this class.</p>
+<p class="description"><p>return the name of pre_action_processor class because we must call it's execute method before loading any action this is extremely usefull when something have to be done before an action loads. like privilege management. if the execute method returns true then action loader will load the desired action. otherwise it will die with a custom error message provided by this class.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_pre_action_processor
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_root_action" id="get_root_action"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_root_action</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a250">250</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return root action</p>
+<p class="description"><p>return root action</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_root_action
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_root_template" id="get_root_template"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_root_template</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a113">113</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return the root template</p>
+<p class="description"><p>return the root template</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_root_template
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_stylesheet" id="get_stylesheet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_stylesheet</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a240">240</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return stylesheet</p>
+<p class="description"><p>return stylesheet</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_stylesheet
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_title" id="get_title"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_title</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a220">220</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return package title</p>
+<p class="description"><p>return package title</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_title
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_version" id="get_version"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_version</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a230">230</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return package version</p>
+<p class="description"><p>return package version</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_version
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodis_compile_required" id="is_compile_required"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">is_compile_required</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a146">146</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">is compilation necessary for this root_template</p>
+<p class="description"><p>is compilation necessary for this root_template</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			is_compile_required
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodrequire_jscalendar" id="require_jscalendar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">require_jscalendar</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a208">208</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return if jscalendar is needed or not</p>
+<p class="description"><p>return if jscalendar is needed or not</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			require_jscalendar
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodrequire_overlib" id="require_overlib"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">require_overlib</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a196">196</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return if overlib is needed or not</p>
+<p class="description"><p>return if overlib is needed or not</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			require_overlib
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methoduse_smarty_plugin" id="use_smarty_plugin"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">use_smarty_plugin</span> (line <span class="line-number"><a href="..//__filesource/fsource_Zephyr__helperpackagemanager.class.php.html#a280">280</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return whether to use package specific user defined smarty plugins or not</p>
+<p class="description"><p>return whether to use package specific user defined smarty plugins or not</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			use_smarty_plugin
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Sat, 15 Apr 2006 22:10:30 +0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

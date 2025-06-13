@@ -1,0 +1,6 @@
+Maseno;M23;FIRST;26.00;2,730.00
+Maseno;M23;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,460.00
+Balance Carried  Forward ;;;;3,862.00
+Amount Payable: ;;;;3,862.00

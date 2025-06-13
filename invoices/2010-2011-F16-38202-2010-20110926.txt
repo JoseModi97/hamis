@@ -1,0 +1,5 @@
+Kstc 3;208;MODULEII;150.00;21,750.00
+;;;;
+Total Invoice Amount: ;;;;21,750.00
+Balance Carried  Forward ;;;;21,750.00
+Amount Payable: ;;;;21,750.00

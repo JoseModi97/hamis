@@ -1,0 +1,5 @@
+;;;0.00;0.00
+;;;;
+Total Invoice Amount: ;;;;0.00
+Balance Carried  Forward ;;;;12,300.00
+Amount Payable: ;;;;12,300.00

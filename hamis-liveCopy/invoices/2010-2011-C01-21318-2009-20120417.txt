@@ -1,0 +1,5 @@
+Womens Hall;C112;FOREIGN;150.00;12,150.00
+;;;;
+Total Invoice Amount: ;;;;12,150.00
+Balance Carried  Forward ;;;;30,870.00
+Amount Payable: ;;;;30,870.00

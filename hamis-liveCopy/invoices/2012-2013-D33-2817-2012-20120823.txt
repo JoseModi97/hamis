@@ -1,0 +1,6 @@
+Lower Kabete New Halls;2-06;SECOND;30.00;3,150.00
+Lower Kabete New Halls;2-06;FIRST;30.00;3,360.00
+;;;;
+Total Invoice Amount: ;;;;6,510.00
+Balance Carried  Forward ;;;;6,510.00
+Amount Payable: ;;;;6,510.00

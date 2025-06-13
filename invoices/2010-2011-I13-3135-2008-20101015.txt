@@ -1,0 +1,7 @@
+Chiromo-m;C110;FIRST;28.00;2,940.00
+Chiromo-m;C110;SECOND;28.00;2,940.00
+Chiromo-m;C110;FOURTH;28.00;1,372.00
+;;;;
+Total Invoice Amount: ;;;;7,252.00
+Balance Brought  Forward ;;;;-394.00
+Amount Payable: ;;;;6,858.00

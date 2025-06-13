@@ -1,0 +1,6 @@
+Africa;312;SECOND;21.00;2,205.00
+Rogers;317;FIRST;26.00;2,184.00
+;;;;
+Total Invoice Amount: ;;;;4,389.00
+Balance Brought  Forward ;;;;-11.00
+Amount Payable: ;;;;0.00

@@ -1,0 +1,6 @@
+Tom Mboya;Q521;SECOND;10.00;1,050.00
+Elgon;113;FIRST;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;3,255.00
+Balance Carried  Forward ;;;;3,255.00
+Amount Payable: ;;;;3,255.00

@@ -1,0 +1,42 @@
+body
+{
+	font-family: verdana;
+}
+
+h1
+{
+	font-size: 18px;
+	color: red;
+	display: block;
+	border: 1px dotted black;
+	padding: 5px;
+}
+
+.btn
+{
+	width: 200px;	
+}
+
+.resbox
+{
+	width: 400px;
+	height: 300px;
+	background-color: #cccccc;
+	padding: 10px;
+}
+
+#test_result img
+{
+	border: 1px solid #000000;
+}
+
+th
+{
+	text-align: left;
+}
+
+table
+{
+	font-family: verdana;
+	font-size: 12px;
+}

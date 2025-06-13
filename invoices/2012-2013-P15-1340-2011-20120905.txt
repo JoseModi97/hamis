@@ -1,0 +1,6 @@
+Radhakrishnan;228;FIRST;26.00;2,730.00
+Radhakrishnan;228;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,460.00
+Balance Carried  Forward ;;;;7,066.00
+Amount Payable: ;;;;7,066.00

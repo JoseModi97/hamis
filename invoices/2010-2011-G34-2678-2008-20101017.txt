@@ -1,0 +1,6 @@
+Parklands Female;128;FIRST;26.00;2,756.00
+Parklands Female;128;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,486.00
+Balance Carried  Forward ;;;;5,328.00
+Amount Payable: ;;;;5,328.00

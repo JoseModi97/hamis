@@ -1,0 +1,6 @@
+University Hall ( Kimberly);121;FIRST;28.00;3,136.00
+University Hall ( Kimberly);121;SECOND;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;6,076.00
+Balance Carried  Forward ;;;;2,940.00
+Amount Payable: ;;;;2,940.00

@@ -1,0 +1,7 @@
+Houses;H4-3;FIRST;21.00;2,352.00
+Houses;H4-3;SECOND;21.00;2,205.00
+Houses;H4-3;THIRD;21.00;1,176.00
+;;;;
+Total Invoice Amount: ;;;;5,733.00
+Balance Carried  Forward ;;;;5,733.00
+Amount Payable: ;;;;5,733.00

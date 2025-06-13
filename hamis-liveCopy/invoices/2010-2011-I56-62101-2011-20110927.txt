@@ -1,0 +1,5 @@
+Chiromo-m;C304;MODULEII;150.00;8,100.00
+;;;;
+Total Invoice Amount: ;;;;8,100.00
+Balance Brought  Forward ;;;;-11,700.00
+Amount Payable: ;;;;0.00

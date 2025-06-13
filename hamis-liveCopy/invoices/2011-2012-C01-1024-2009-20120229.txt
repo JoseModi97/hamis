@@ -1,0 +1,6 @@
+Mitchel;128;SECOND;26.00;2,730.00
+Africa;400;FIRST;21.00;2,184.00
+;;;;
+Total Invoice Amount: ;;;;4,914.00
+Balance Carried  Forward ;;;;4,911.00
+Amount Payable: ;;;;4,911.00

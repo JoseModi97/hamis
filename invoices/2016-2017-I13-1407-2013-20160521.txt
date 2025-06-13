@@ -1,0 +1,6 @@
+Chiromo-m;C310;FIRST;28.00;2,940.00
+Chiromo-m;C310;SECOND;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;5,880.00
+Balance Carried  Forward ;;;;6,408.00
+Amount Payable: ;;;;6,408.00

@@ -1,0 +1,5 @@
+Elgon;509;FOREIGN;180.00;76,500.00
+;;;;
+Total Invoice Amount: ;;;;76,500.00
+Balance Carried  Forward ;;;;76,500.00
+Amount Payable: ;;;;76,500.00

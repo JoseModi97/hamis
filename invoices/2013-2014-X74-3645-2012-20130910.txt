@@ -1,0 +1,6 @@
+Ngala;112;SECOND;28.00;2,940.00
+Ngala;18;FIRST;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;5,880.00
+Balance Brought  Forward ;;;;-28.00
+Amount Payable: ;;;;0.00

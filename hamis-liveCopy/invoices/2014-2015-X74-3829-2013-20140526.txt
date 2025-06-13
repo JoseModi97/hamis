@@ -1,0 +1,6 @@
+Jamhuri;QR7;SECOND;21.00;2,205.00
+Prefabs 9;F93;FIRST;18.00;1,890.00
+;;;;
+Total Invoice Amount: ;;;;4,095.00
+Balance Carried  Forward ;;;;4,001.00
+Amount Payable: ;;;;4,001.00

@@ -1,0 +1,5 @@
+Mamlaka B;040;VACATIONAL;60.00;2,160.00
+;;;;
+Total Invoice Amount: ;;;;2,160.00
+Balance Carried  Forward ;;;;336.00
+Amount Payable: ;;;;336.00

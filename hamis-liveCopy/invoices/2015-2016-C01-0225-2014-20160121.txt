@@ -1,0 +1,6 @@
+Rogers;316;FIRST;21.00;2,205.00
+Jamhuri;320;SECOND;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;5,145.00
+Balance Carried  Forward ;;;;2,940.00
+Amount Payable: ;;;;2,940.00

@@ -1,0 +1,6 @@
+Womens Hall;B101;FIRST;26.00;2,730.00
+Chiromo-f;B002;SECOND;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;5,670.00
+Balance Carried  Forward ;;;;8,520.00
+Amount Payable: ;;;;8,520.00

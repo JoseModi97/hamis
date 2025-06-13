@@ -1,0 +1,5 @@
+Chiromo-f;B106;MODULEII;150.00;22,950.00
+;;;;
+Total Invoice Amount: ;;;;22,950.00
+Balance Carried  Forward ;;;;24,190.00
+Amount Payable: ;;;;24,190.00

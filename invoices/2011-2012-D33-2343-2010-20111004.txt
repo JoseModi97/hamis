@@ -1,0 +1,6 @@
+Block B;B09;SECOND;26.00;2,730.00
+Block B;B09;FIRST;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,460.00
+Balance Carried  Forward ;;;;4,382.00
+Amount Payable: ;;;;4,382.00

@@ -1,0 +1,6 @@
+Chiromo-m;BQR1L;FIRST;26.00;2,730.00
+Chiromo-m;BQR1L;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,460.00
+Balance Brought  Forward ;;;;-80.00
+Amount Payable: ;;;;0.00

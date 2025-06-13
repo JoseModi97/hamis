@@ -1,0 +1,6 @@
+Hall 1(kikuyu);1;FIRST;30.00;3,150.00
+Hall 1(kikuyu);1;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;3,570.00
+Amount Payable: ;;;;3,570.00

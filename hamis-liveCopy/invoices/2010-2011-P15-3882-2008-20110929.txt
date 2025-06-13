@@ -1,0 +1,5 @@
+Chiromo-m;A010;VACATIONAL;60.00;6,180.00
+;;;;
+Total Invoice Amount: ;;;;6,180.00
+Balance Carried  Forward ;;;;2,646.00
+Amount Payable: ;;;;2,646.00

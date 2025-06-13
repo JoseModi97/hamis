@@ -1,0 +1,6 @@
+Meru;41;SECOND;30.00;3,150.00
+Kapernguria;E58;FIRST;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;5,880.00
+Balance Carried  Forward ;;;;5,876.00
+Amount Payable: ;;;;5,876.00

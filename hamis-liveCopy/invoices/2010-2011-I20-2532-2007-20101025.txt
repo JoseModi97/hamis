@@ -1,0 +1,6 @@
+Chiromo-m;CBM14;FIRST;28.00;2,940.00
+Chiromo-m;CBM14;SECOND;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;5,880.00
+Balance Carried  Forward ;;;;4,438.00
+Amount Payable: ;;;;4,438.00

@@ -1,0 +1,5 @@
+Dag-hammarsjold;334;FOREIGN;180.00;33,760.00
+;;;;
+Total Invoice Amount: ;;;;33,760.00
+Balance Carried  Forward ;;;;109,040.00
+Amount Payable: ;;;;109,040.00

@@ -1,0 +1,6 @@
+Lodwar;010;FIRST;30.00;3,150.00
+Lodwar;010;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;9,850.00
+Amount Payable: ;;;;9,850.00

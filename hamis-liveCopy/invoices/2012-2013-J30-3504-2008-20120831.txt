@@ -1,0 +1,6 @@
+Mugabe;315;FIRST;30.00;3,150.00
+Mugabe;315;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;6,272.00
+Amount Payable: ;;;;6,272.00

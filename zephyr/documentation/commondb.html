@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Common database Operations</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #1c1c1b;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	color: #EEEEEE;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+h3
+{
+	font-size: 18px;
+	margin-top: 7px;
+	color: #444444;
+}
+
+.text_container
+{
+	line-height:1.5em; 
+	padding: 5px; 
+	margin-top: 5px; 
+	padding-top: 0px;
+	border: 1px solid #BBBBBB;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+
+a:active
+{
+	color: #FFFF00;
+}
+
+a:visited:hover
+{
+	text-decoration: underline;
+	color: #EEEEEE;
+}
+
+a:visited
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+.code
+{
+	font-family: "Lucida Console";
+	font-size: 12px;
+	background-color:#EEEEEE !important;
+	padding: 10px;
+	border: 1px solid;
+	border-color:#CCCCCC ;
+	display: block;
+	color: #333333 !important;
+}
+.hilight {	color: #993300;
+}
+.hl-brackets {    color: Olive;
+}
+.hl-code {    color: Gray;
+}
+.hl-comment {    color: Orange;
+}
+.hl-identifier {    color: Blue;
+}
+.hl-inlinedoc {    color: Blue;
+}
+.hl-inlinetags {    color: Blue;
+}
+.hl-main {	font-size:14px;
+}
+.hl-quotes {    color: Darkred;
+}
+.hl-reserved {    color: Green;
+}
+.hl-string {    color: Red;
+}
+.hl-var {    color: Darkblue;
+}
+.php {	font-family: "Lucida Console";
+	background-color:#FFFFFF;
+	padding: 5px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+	height: 250px;
+	overflow: auto;
+}
+.code1 {	font-family: "Lucida Console";
+	font-size: 12px;
+	background-color:#CCFFCC;
+	padding: 10px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+}
+.php2 {	font-family: "Lucida Console";
+	background-color:#FFFFFF;
+	padding: 5px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+	overflow: auto;
+}
+.style1 {color: #FF0000}
+-->
+</style></head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <th colspan="2" scope="col"><div align="left"><img src="ZephyrBanner.jpg" width="520" /></div>      
+    <div align="left"></div></th>
+  </tr>
+  <tr>
+    <td width="23%" valign="top"  style="border-top: 1px solid #CCCCCC; padding-top: 0px;"  ><div align="left" style="padding-left:17px; line-height:1.5em;" >
+      <p><a href="index.html">Introduction</a><br />
+        <a href="installation.html">Installation</a><br />
+        <a href="gettingstarted.html">Getting started</a><br />
+        <a href="package.html">Package Definition Reference</a><br />
+        <a href="database.html">Connecting to Database<br /></a>
+        <a href="commondb.html">Common DB Operations </a><br />
+        <a href="filter.html">Filter</a><a href="crud.html"></a><br />
+        <a href="multipledb.html">Handling Multiple Databases</a><br />
+        <a href="howto.html">How-Tos</a><br />
+        <a href="deployment.html">Deployment</a><br />
+        <a href="credit.html">Credit</a><br />
+        <a href="feedback.html">Feedback</a><br />
+        <a href="changelog.html">Changelog</a></p>
+      <p><a href="zephyrAPI/index.html">Zephyr API </a><br />
+        <br />
+      </p>
+    </div></td>
+    <td width="77%" valign="top" style="border-top: 1px solid #CCCCCC; padding-top: 0px;" >
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-inserting records-&gt;&gt;</h3>
+      <p>inserting records in a table is extremely easy with zephyr framework. all you have to do extra is creating a domain model of your table. for eaxmple lets see our sample table student. </p>
+      <pre><span class="code">
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| name         | varchar(255)|      |     |         |                |
+| roll         | int(11)     |      |     |         |                |
+| class        | int         |      |     |         |                |
++--------------+-------------+------+-----+---------+----------------+
+</span></pre>
+      <p>now lets create our domain model. its a simple class describing all the fields you want to process except the &quot;auto_increment&quot; field. here is the domain for our sample student table. </p>
+      <p><span class="code">class student<br />
+        {<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;public $name; <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;public $roll;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;public $class; <br />
+        } </span></p>
+      <p>thats it!. now create a sample view in which user will input the data.</p>
+      <p><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;text&quot; id=&quot;name&quot;&gt; <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;text&quot; id=&quot;roll&quot;&gt; <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;text&quot; id=&quot;class&quot;&gt;<br />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;button&quot; value=&quot; = &quot; onclick=&quot;insert_std();&quot; /&gt; </span></p>
+      <p> we will invoke <span class="hilight">insert_std()</span> function [javascript] to process these records and passthem to an action which will insert our data. lets see this <span class="hilight">insert_std()</span> function. <span class="style1">NOTE THAT WE USED SAME ID AS OUR TABLE FIELD NAME IN THIS VIEW</span>. </p>
+      <p><span class="code">function insert_std()<br />
+        {<br />
+  &nbsp;&nbsp;serialized = group_serialize(&quot;name&quot;,&quot;roll&quot;,&quot;class&quot;);<br />
+  &nbsp;&nbsp;load_action_value('insert_record', serialized,'result');<br />
+        }</span></p>
+      <p>this function just serialize all these values and invoke our action &quot;insert_record&quot;. lets design that action. </p>
+      <div class="hl-main">
+        <pre><span class="code">&lt;?<br />load_db_domain(&quot;student&quot;);
+
+class insertstudent implements action {
+
+	public $params ;
+
+	public function execute()
+	{		
+		$cls = 	auto_fill_domain("student");
+		$dao = new DAO($cls);
+		$query = $dao-&gt;insert();
+		$students = $dao-&gt;selectBySQL(&quot;SELECT * FROM   students&quot;);
+		$data = array(&quot;students&quot;=&gt;$students);
+		
+		return array(&quot;view_file&quot;=&gt;&quot;liststudents&quot;, &quot;data&quot;=&gt;$data);
+	}
+	
+}
+?</span></pre>
+      </div>
+      </p>
+      <p>in this action, load_db_domain() function simply loads the appropriate class for domain model. as we are using domain model &quot;student&quot;, so we used load_db_domain(&quot;student&quot;)</p>
+      <p><span class="code">cls = 	auto_fill_domain(&quot;student&quot;);</span></p>
+      <p>the above line automatically fills the domain model with the values that user submits. </p>
+      <p>now we just iunsert the data </p>
+      <p><span class="php2"><span class="hl-code"> </span><span class="hl-var">$query</span><span class="hl-code"> = </span><span class="hl-var">$dao</span><span class="hl-code">-&gt;</span><span class="hl-identifier">insert</span><span class="hl-brackets">()</span><span class="hl-code">;</span></span></p>
+      <p>all done, now just return all the students to user with recently inserted one. </p>
+      <p><span class="php2"><span class="hl-code"> </span><span class="hl-var">$students</span><span class="hl-code"> = </span><span class="hl-var">$dao</span><span class="hl-code">-&gt;</span><span class="hl-identifier">selectBySQL</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">SELECT * FROM students</span><span class="hl-quotes">&quot;</span><span class="hl-brackets">)</span><span class="hl-code">; </span><span class="hl-var"><br />
+        $data</span><span class="hl-code"> = </span><span class="hl-reserved">array</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">students</span><span class="hl-quotes">&quot;</span><span class="hl-code">=&gt;</span><span class="hl-var">$students</span><span class="hl-brackets">)</span><span class="hl-code">; </span><span class="hl-reserved"><br />
+          return array</span><span class="hl-brackets">(</span><span class="hl-quotes">&quot;</span><span class="hl-string">view_file</span><span class="hl-quotes">&quot;</span><span class="hl-code">=&gt;</span><span class="hl-quotes">&quot;</span><span class="hl-string">liststudents</span><span class="hl-quotes">&quot;</span><span class="hl-code">, </span><span class="hl-quotes">&quot;</span><span class="hl-string">data</span><span class="hl-quotes">&quot;</span><span class="hl-code">=&gt;</span><span class="hl-var">$data</span><span class="hl-brackets">)</span><span class="hl-code">;</span></span></p>
+      <hr size="1" noshade="noshade" />
+	</div>
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-modifying and deleting records-&gt;&gt;</h3>
+      <p>to update records all you have to do is just retrieve submitted data into a domain model and call &quot;update()&quot; mehtod of dao. lets see a sample action that updates the record. </p>
+      <div class="hl-main">
+        <pre><span class="code">&lt;?<br />load_db_domain(&quot;student&quot;);
+
+class updatestudent implements action {
+
+	public $params ;
+
+	public function execute()
+	{		
+		cls = 	auto_fill_domain(&quot;student&quot;);		
+		$dao = new DAO($cls);
+		$query = $dao-&gt;update(&quot;roll=1&quot;);
+		$students = $dao-&gt;selectBySQL(&quot;SELECT * FROM   students&quot;);
+		$data = array(&quot;students&quot;=&gt;$students);
+		
+		return array(&quot;view_file&quot;=&gt;&quot;liststudents&quot;, &quot;data&quot;=&gt;$data);
+	}
+}
+?</span></pre>
+      </div>
+      </p>
+      <p>here the only thing differs is that using the &quot;<span class="hilight">update()</span>&quot; method. after filling the domain model with user input, you can &quot;<span class="hilight">update()</span>&quot; method with a non optional where clause, here we use &quot;<span class="hilight">roll = 1</span>&quot; which means that update the student where roll = 1. </p>
+      <p>for deleting all you have to do using the <span class="hilight">delete() </span>method of dao with same where clause. thats it. </p>
+	</div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

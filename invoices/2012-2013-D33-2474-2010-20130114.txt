@@ -1,0 +1,6 @@
+Kajiado;08;FIRST;30.00;3,150.00
+Kajiado;08;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;6,242.00
+Amount Payable: ;;;;6,242.00

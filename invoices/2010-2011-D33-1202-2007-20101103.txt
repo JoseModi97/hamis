@@ -1,0 +1,6 @@
+Magadi;11;FIRST;30.00;3,150.00
+Magadi;11;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;6.00
+Amount Payable: ;;;;6.00

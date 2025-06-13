@@ -1,0 +1,6 @@
+Houses;H5-9;FIRST;26.00;5,772.00
+Houses;H5-9;SECOND;26.00;2,314.00
+;;;;
+Total Invoice Amount: ;;;;8,086.00
+Balance Brought  Forward ;;;;-8,200.00
+Amount Payable: ;;;;-114.00

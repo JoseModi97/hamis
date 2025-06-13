@@ -1,0 +1,6 @@
+Malindi;2;SECOND;30.00;3,150.00
+Kapernguria;E14;FIRST;26.00;2,704.00
+;;;;
+Total Invoice Amount: ;;;;5,854.00
+Balance Carried  Forward ;;;;5,854.00
+Amount Payable: ;;;;5,854.00

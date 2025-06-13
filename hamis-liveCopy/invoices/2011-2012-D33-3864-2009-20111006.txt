@@ -1,0 +1,6 @@
+Kapernguria;E53;FIRST;26.00;2,704.00
+Masaku;18;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;5,854.00
+Balance Carried  Forward ;;;;5,854.00
+Amount Payable: ;;;;5,854.00

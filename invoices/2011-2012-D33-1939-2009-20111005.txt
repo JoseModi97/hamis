@@ -1,0 +1,5 @@
+Malindi;A6;FIRST;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;3,150.00
+Balance Carried  Forward ;;;;0.00
+Amount Payable: ;;;;0.00

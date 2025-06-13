@@ -1,0 +1,6 @@
+State House Road Hostel;G25;SECOND;26.00;2,730.00
+Jamhuri;320;FIRST;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;5,670.00
+Balance Carried  Forward ;;;;405.00
+Amount Payable: ;;;;405.00

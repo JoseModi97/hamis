@@ -1,0 +1,7 @@
+Tana C;G23;FIRST;26.00;2,730.00
+Tana C;G23;SECOND;26.00;2,730.00
+Tana C;G23;FOURTH;26.00;1,456.00
+;;;;
+Total Invoice Amount: ;;;;6,916.00
+Balance Brought  Forward ;;;;-9,594.00
+Amount Payable: ;;;;0.00

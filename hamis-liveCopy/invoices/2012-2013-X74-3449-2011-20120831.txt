@@ -1,0 +1,6 @@
+Jamhuri;QR7;SECOND;21.00;2,205.00
+Tom Mboya;Q01;FIRST;21.00;1,764.00
+;;;;
+Total Invoice Amount: ;;;;3,969.00
+Balance Carried  Forward ;;;;3,969.00
+Amount Payable: ;;;;3,969.00

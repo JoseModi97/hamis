@@ -1,0 +1,5 @@
+Nyerere;105;SECOND;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;2,205.00
+Balance Carried  Forward ;;;;2,023.00
+Amount Payable: ;;;;2,023.00

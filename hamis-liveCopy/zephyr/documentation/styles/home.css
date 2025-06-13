@@ -1,0 +1,120 @@
+/* CSS Document */
+
+body
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+h2{
+	font-size: 18px;
+	display: block;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #dddddd;
+}
+
+h3
+{
+	font-size: 14px;
+}
+
+.hilight
+{
+	color: #993300;
+}
+
+.code
+{
+	font-family: "Lucida Console";
+	font-size: 12px;
+	background-color:#CCFFCC;
+	padding: 10px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+}
+.php
+{
+	font-family: "Lucida Console";
+	background-color:#FFFFFF;
+	padding: 5px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+	height: 250px;
+	overflow: auto;
+}
+
+.php2
+{
+	font-family: "Lucida Console";
+	background-color:#FFFFFF;
+	padding: 5px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+	overflow: auto;
+}
+
+/* highlight */
+.hl-default {
+    color: Black;
+}
+.hl-code {
+    color: Gray;
+}
+.hl-brackets {
+    color: Olive;
+}
+.hl-comment {
+    color: Orange;
+}
+.hl-quotes {
+    color: Darkred;
+}
+.hl-string {
+    color: Red;
+}
+.hl-identifier {
+    color: Blue;
+}
+.hl-builtin {
+    color: Teal;
+}
+.hl-reserved {
+    color: Green;
+}
+.hl-inlinedoc {
+    color: Blue;
+}
+.hl-var {
+    color: Darkblue;
+}
+.hl-url {
+    color: Blue;
+}
+.hl-special {
+    color: Navy;
+}
+.hl-number {
+    color: Maroon;
+}
+.hl-inlinetags {
+    color: Blue;
+}
+.hl-main { 
+	font-size:14px;
+}
+.hl-gutter {
+    background-color: #999999;
+    color: White
+}
+.hl-table {
+    border: solid 1px Lightgrey;
+}
+
+pre
+{
+	font-size: 12px;
+}

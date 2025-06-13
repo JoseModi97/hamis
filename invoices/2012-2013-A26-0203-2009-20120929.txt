@@ -1,0 +1,6 @@
+Mandela;AG02;FIRST;28.00;2,940.00
+Mandela;AG02;SECOND;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;5,880.00
+Balance Brought  Forward ;;;;-5,880.00
+Amount Payable: ;;;;0.00

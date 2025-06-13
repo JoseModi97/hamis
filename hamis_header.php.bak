@@ -1,0 +1,134 @@
+<?php 
+define('SMIS_RELATIVE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/smis');
+include_once(SMIS_RELATIVE_PATH . '/includes/smis_header_common.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="author" content="<?php echo institutionName;?>" />
+	<meta name="description" content="Student Online Room Reservation System" />
+	<meta name="keywords" content="key, words" />	
+	<link rel="shortcut icon" href="<?php echo  SMIS_RELATIVE_PATH;?>images/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="smis/includes/favicon.ico" type="image/x-icon" />
+	<style type="text/css"> 
+	<?php echo "@import url(".SMIS_RELATIVE_PATH."styles/main.css);";?>
+	</style>
+	<title><?php echo institutionName;?> : Students Online Portal</title>
+</head>
+<body>
+	<div id="content">
+		<div id="top_info">
+			<div id="logo">
+				<a href="<?php echo SMIS_RELATIVE_PATH;?>index.php" title="Home">
+				<img src="<?php echo SMIS_RELATIVE_PATH;?>images/logo.jpg" class="logoimg" /></a>
+			</div>
+			<div class="title">
+				<h1><a href="http://10.2.21.4/" title="University of Nairobi Home Page">
+				<?php echo institutionName;?> </a></h1>
+				<p id="slogan" title="Towards World Class Excellence">Towards World Class Excellence</p>
+			</div>
+		</div>	
+		<?php 
+ 		$smisMenuGroup =strtolower(CCGetSession('smisMenuGroup'));
+ 		$menuDisplay="";$teachTimeDispClass="";$crsRegDispClass="";$smisHomeDispClass=""; 
+ 		$statementDispClass="";$resultsDispClass="";$enquiriesDispClass=""; 
+		$regNo=CCGetSession('regNo'); 
+    	switch ($smisMenuGroup) {
+		case "feestatement":
+ 			$statementDispClass=' class="current" '; 
+ 			$menuDisplay='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'statement_summary.php">Fee Statement'; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+ 			$menuDisplay.='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'statement_detailed.php">Detailed Fee Statement'; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+		break;
+		case "teachingtimetable":
+ 			$teachTimeDispClass=' class="current" '; 
+ 			$menuDisplay='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'teaching_timetable.php">Class Timetable'; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+ 			$menuDisplay.='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'exams_timetable.php">Class Exam Timetable'; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+ 			$menuDisplay.='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'teaching_timetable.php?realm=myTimetable'; 
+ 			$menuDisplay.='&timetable=myTimetable">'; 
+ 			$menuDisplay.='myTimetable</a></li></ul></div>'; 
+ 			$menuDisplay.='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'exams_timetable.php?realm=myTimetable'; 
+ 			$menuDisplay.='&timetable=myTimetable">'; 
+ 			$menuDisplay.='myExam Timetable</a></li></ul></div>'; 
+		break;
+		case "courseregistration":
+ 			$crsRegDispClass=' class="current" '; 
+ 			$menuDisplay=''; 
+  			if (($regNo == "I20/2934/2004" ) or ($regNo == "C01/00000/2008" ) ) {
+ 			$menuDisplay.='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'registration_timetable.php">Course Registration'; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+			} //
+ 			$menuDisplay.='<div class="thirds"><ul> <li> <B>'; 
+ 			$menuDisplay.='Refer to guide notes below'; 
+ 			$menuDisplay.='</B> </li></ul></div>'; 
+		break;
+		case "smisresults":
+ 			$resultsDispClass=' class="current" '; 
+ 			$menuDisplay='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'result_slips.php">Provisional Result Slip'; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+ 			$menuDisplay.='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'enquiries.php">Transcript Request'; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+		break;
+		case "smisenquiries":
+ 			$enquiriesDispClass=' class="current" '; 
+ 			$menuDisplay='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'enquiries.php">Transcript Request'; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+ 			$menuDisplay.='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'enquiries.php"> Enquiries on Fees '; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+ 			$menuDisplay.='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'enquiries.php"> Enquiries on Exams Results '; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+		break;
+		default:
+ 			$smisHomeDispClass=' class="current" '; 
+ 			$menuDisplay='<div class="thirds"><ul> <li><a href="'; 
+ 			$menuDisplay.=SMIS_RELATIVE_PATH.'password_update.php">Change Password'; 
+ 			$menuDisplay.='</a></li></ul></div>'; 
+		} // switch 
+		?>
+		<ul id="tablist">
+			<li><a <?php echo $smisHomeDispClass.' href="'.SMIS_RELATIVE_PATH.'index.php"';?> 
+			accesskey="H"> Portal Home </a></li>
+			<li><a <?php echo $statementDispClass.' href="'.SMIS_RELATIVE_PATH.'statement_summary.php"';?> 
+			accesskey="S"> Fee statement</a></li>
+			<li><a <?php echo $teachTimeDispClass.' href="'.SMIS_RELATIVE_PATH.'teaching_timetable.php"';?> 
+			accesskey="T"> Timetables</a></li>
+			<li><a <?php echo $crsRegDispClass.' href="'.SMIS_RELATIVE_PATH.'course_registration.php"';?>
+			 accesskey="C"> Course Registration</a></li>
+			<li><a <?php echo $resultsDispClass.' href="'.SMIS_RELATIVE_PATH.'result_slips.php"';?> 
+			accesskey="R"> Results</a></li>
+			<li><a <?php echo $enquiriesDispClass.' href="'.SMIS_RELATIVE_PATH.'enquiries.php"';?> 
+			accesskey="E"> Enquiries </a></li>
+			<li><a <?php echo $enquiriesDispClass.' href="'.swaSMIS_RELATIVE_PATH.'bookroom.php"';?> 
+			accesskey="E"> Book Room </a></li>
+			<li><a <?php echo ' href="'.SMIS_RELATIVE_PATH.'index.php?smisLogout=true"';?> 
+			accesskey="L"> Logout </a></li>
+		</ul>
+		<div id="topics">
+		<?php 	echo $menuDisplay;	?>
+	  </div>
+<?php 
+ 	$logonSuccess=false; 
+ 	$smisLogon=""; 
+ 	$smisLogon=getParameter('smisLogon'); 
+ 	if (strlen($smisLogon))  $smisLogonSuccess=processLogon();
+ 	$smisGuestLogon=""; 
+ 	$smisGuestLogon=getParameter('smisGuestLogon'); 
+ 	if (strlen($smisGuestLogon))  $smisLogonSuccess=processGuestLogon();
+?>
+	  

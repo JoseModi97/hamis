@@ -1,0 +1,7 @@
+Stella Awinja;101;FOURTH;21.00;1,176.00
+Kwame Nkrumah-female;341;FIRST;28.00;2,940.00
+Kwame Nkrumah-female;341;SECOND;28.00;3,332.00
+;;;;
+Total Invoice Amount: ;;;;7,448.00
+Balance Carried  Forward ;;;;300.00
+Amount Payable: ;;;;300.00

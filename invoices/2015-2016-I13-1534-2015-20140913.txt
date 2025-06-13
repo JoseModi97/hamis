@@ -1,0 +1,6 @@
+Prefabs 7;F71;FIRST;21.00;2,646.00
+Prefabs 7;F71;SECOND;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;4,851.00
+Balance Brought  Forward ;;;;-9.00
+Amount Payable: ;;;;0.00

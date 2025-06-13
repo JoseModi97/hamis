@@ -1,0 +1,6 @@
+Prefabs 8;F816;SECOND;18.00;1,890.00
+Elgon;116;FIRST;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;4,095.00
+Balance Carried  Forward ;;;;4,091.00
+Amount Payable: ;;;;4,091.00

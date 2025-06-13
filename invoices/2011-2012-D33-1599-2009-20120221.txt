@@ -1,0 +1,6 @@
+Malindi;37;FIRST;30.00;3,120.00
+Masaku;36;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,270.00
+Balance Brought  Forward ;;;;-30.00
+Amount Payable: ;;;;0.00

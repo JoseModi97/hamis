@@ -1,0 +1,6 @@
+Sagana;06;SECOND;30.00;3,150.00
+Kiang'ombe;06;FIRST;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Brought  Forward ;;;;-3,822.00
+Amount Payable: ;;;;0.00

@@ -1,0 +1,6 @@
+Kwame Nkrumah-female;312;FIRST;28.00;2,940.00
+Kwame Nkrumah-female;312;SECOND;28.00;3,304.00
+;;;;
+Total Invoice Amount: ;;;;6,244.00
+Balance Carried  Forward ;;;;0.00
+Amount Payable: ;;;;0.00

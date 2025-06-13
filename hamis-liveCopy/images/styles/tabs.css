@@ -1,0 +1,71 @@
+/********************************************************************************************/
+/* AJAX Simple Tabs by developersnippets, This code is intended for practice purposes.      */
+/* You may use these functions as you wish, for commercial or non-commercial applications,  */
+/* but please note that the author offers no guarantees to their usefulness, suitability or */
+/* correctness, and accepts no liability for any losses caused by their use.                */
+/********************************************************************************************/
+
+pre {
+	text-indent: 30px;
+	}
+
+#tabmenu {
+	color: #000;
+	border-bottom: 3px solid #9FC7D8;
+	padding:0;
+	margin: 0px;
+	z-index: 1;
+	padding: 0;
+	}
+
+#tabmenu li {
+	display: inline;
+	overflow: hidden;
+	list-style-type: none;
+	}
+#tabmenu a{
+	color: #fff;
+	background: #808080;
+	border-bottom: none;
+	padding: 2px 3px 2px 3px;
+	margin: 0px;
+	text-decoration: none;
+	cursor:hand;
+	font-weight: bold;
+	}
+
+#tabmenu a.active {
+	color: #2F637A;
+	background: #9FC7D8;
+	border: 1px solid #9FC7D8;
+	border-bottom: 1px solid #9FC7D8;
+	padding: 2px 5px 2px 5px;
+	margin: 0px;
+	text-decoration: none;
+	cursor:hand;
+	}
+
+
+#tabmenu a:hover {
+	color: #fff;
+	background: #6495AB;
+	cursor:pointer;
+	}
+
+#tabmenu a:visited {
+	color: #ffffff;
+	}
+
+#tabmenu a.active:hover {
+	background: #AFCEED;
+	color: #ffffff;
+	}
+
+#ajaxcontent {
+	text-align: justify;
+	padding: 0px;
+	border: 0px solid #AFCEED;
+	border-top: none;
+	z-index: 2;
+	}
+

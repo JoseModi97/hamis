@@ -1,0 +1,33 @@
+.lb td
+{
+	border-bottom: 1px solid #cccccc;
+}
+
+a
+{
+	color: #999999;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color:#FF6600;
+	text-decoration: underline;
+}
+
+legend
+{
+	border: 1px solid #dddddd;
+	padding-left: 5px;
+	padding-right: 20px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	color: #eeeeee;
+	background-color: #666666;
+	@margin-bottom: 20px;
+}
+
+fieldset
+{
+		padding-top: 20px;
+}

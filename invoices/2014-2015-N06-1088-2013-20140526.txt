@@ -1,0 +1,6 @@
+Tom Mboya;Q01;SECOND;21.00;2,205.00
+Houses;H9-1;FIRST;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;5,355.00
+Balance Carried  Forward ;;;;0.00
+Amount Payable: ;;;;0.00

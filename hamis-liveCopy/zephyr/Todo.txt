@@ -1,0 +1,43 @@
+					Implement mod_rewrite
+					Implement common variables like {$ZEPHYR_ROOT}, {$PACKAGE_ROOT}
+			DONE :: Implement MULTIBYTE STRING serialization as suggested by Pawe? Jojczyk
+			DONE :: Show loading image while loading result in <DIV>s
+			DONE :: Implement Prototype and Moo.fx
+					Support installation by PEAR Channel
+					Implement Active Record design pattern (using adoDB 4.72 builtin active record capability) 
+			DONE :: Implement global $_PARAMS variable 
+			DONE ::	Implement multiple database (Also Fixed adoDB MySQL Driver Bug)
+			DONE ::	Implement Multiple PHP File loading capability
+			NO   ::	Implement Multiple CSS file loading capability
+			DONE ::	Implement Multiple Javascript file loading capability
+					Implement Authentication Manager
+					Implement Intializer in more convenient way
+					Implement Multiple Package resource sharing
+			DONE :: Implement validating Multiple Pre_Action_Processor
+					
+					Implement the facility to set a NULL value in any field
+			DONE :: Implement Passing of non printable character in CPAINT
+					
+					Implement WebService Exposer (RPC and SOAP)
+					Implement Webservice Consumer
+			
+					Implement Debugging Facility	
+			DONE ::	Implement Cookie Processor in Javascript
+			DONE ::	Implement Loading PEAR Packages in Zephyr
+			
+					Managing Session Parameters with Javascript
+		
+DONE but STOPPED ::	When an action returns "var=[somevar=varvalue&somevar2=varvalue2....]" then parse it so that we can access "somevar" and "somevar2" as a regular variable in javascript
+					
+			DONE ::	Implement Abstract DBInfo class
+					Implement abstractInitializer class
+					
+			DONE :: Implement Filters 
+						Input Filters
+						//Content Filters
+						Post Filters
+						//DB Filters
+JSON
+						
+
+						

@@ -1,0 +1,80 @@
+/* Python CCSTheme */
+
+BODY, TABLE, TH, TR, TD, UL, OL, LI, P, FONT, A, BLOCKQUOTE, LABEL { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+
+.PythonPageBODY{ font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+
+.PythonFormTABLE{border: 1px solid #D9D9D9; }
+
+.PythonFormHeaderFont{ color: #000000; font-size: 16px; font-weight: bold; }
+
+.PythonFieldCaptionTD{ border-bottom: 1px solid #D8D8D8; background-color: #EDEDED; color: #000000; font-size: 12px; font-weight: bold; }
+
+.PythonAltDataTD{ border-bottom: 0px none #D8D8D8; background-color: #F4F4F4; color: #000000; font-size: 12px; }
+
+.PythonColumnTD{ border-bottom: 2px solid #000000; background-color: #DADADA; color: #000000; font-size: 12px; }
+
+.PythonDataTD{ border-bottom: 0px solid #D8D8D8; color: #000000; font-size: 13px; }
+
+.PythonErrorDataTD{ border-bottom: 1px solid #D8D8D8; color: #FF0000; font-size: 13px; }
+
+.PythonSeparatorTD{ height: 1px; background-color: #000000; }
+
+.PythonFooterTD{ border-top: 2px solid #000000; background-color: #DADADA; color: #000000; font-weight: bold; font-size: 13px; text-align: center; }
+
+a.PythonSorterLink:link,a.PythonSorterLink:visited{ color: #000000; font-size: 13px; text-decoration: underline; }
+
+a.PythonSorterLink:hover,a.PythonSorterLink:active{ color: #000000; font-size: 13px; text-decoration: none; }
+
+a.PythonDataLink:link,a.PythonDataLink:visited{ color: #000084; font-size: 13px; text-decoration: underline; }
+
+a.PythonDataLink:hover,a.PythonDataLink:active{ color: #000084; font-size: 13px; text-decoration: none; }
+
+a.PythonNavigatorLink:link,a.PythonNavigatorLink:visited{ color: #000000; font-weight: bold; font-size: 13px; text-decoration: underline; }
+
+a.PythonNavigatorLink:hover,a.PythonNavigatorLink:active{ color: #000000; font-weight: bold; font-size: 13px; text-decoration: none; }
+
+.PythonButton { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #EEEEEE; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+
+.PythonInput { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+
+.PythonTextarea { border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; }
+
+.PythonSelect {
+	font-size: 13px;
+	font-family: Tahoma, Verdana, Arial, Helvetica;
+	border: 1px solid #CCCCCC;
+}
+
+/* Calendar */
+
+a.today:link,a.today:visited{ color: #FF0000; font-weight: bold; text-decoration: none; }
+
+a.today:hover,a.today:active{ color: #000000; font-weight: bold; text-decoration: none; }
+
+a.selectedDay:link,a.selectedDay:visited{ color: #000000; font-weight: bold; text-decoration: none; }
+
+a.selectedDay:hover,a.selectedDay:active{ color: #FF0000; font-weight: bold; text-decoration: none; }
+
+a.weekDay:link,a.weekDay:visited{ color: #000084; text-decoration: none; }
+
+a.weekDay:hover,a.weekDay:active{ color: #FF0000; text-decoration: none; }
+
+TD.selectedDay { margin: 1px; background-color: #DADADA; color: #000000; font-size: 13px; }
+
+TD.today { border-top: 1px solid #FF0000; border-left: 1px solid #FF0000; border-bottom: 1px solid #FF0000; border-right: 1px solid #FF0000; color: #000000; font-size: 13px; }
+
+TD.workday { border-bottom: 1px solid #D8D8D8; color: #000000; font-size: 13px; }
+
+TD.weekend { border-bottom: 1px solid #D8D8D8; background-color: #EBEBEB; color: #000000; font-size: 12px; }
+
+TH.calendar { margin: 1px; border-bottom: 2px solid #000000; background-color: #DADADA; color: #000000; font-size: 13px; }
+
+.CalendarButtons { margin: 1px; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; border-top: 1px solid #000000; background-color: #EEEEEE; font-size: 13px; font-family: Tahoma, Verdana, Arial, Helvetica; font-weight: bold; }
+
+.CalendarControls { font-family: Tahoma, Verdana, Arial, Helvetica; font-size: 13px; }
+
+.Table { border: 1px solid #D9D9D9; }
+
+.PythonFieldCaptionTDPrint{ border-bottom: 1px solid #D8D8D8; color: #000000; font-size: 12px; font-weight: bold; }
+

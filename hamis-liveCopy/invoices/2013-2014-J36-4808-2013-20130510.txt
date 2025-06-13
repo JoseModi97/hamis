@@ -1,0 +1,6 @@
+Wakulima;313;FIRST;28.00;3,136.00
+Wakulima;313;SECOND;28.00;6,076.00
+;;;;
+Total Invoice Amount: ;;;;9,212.00
+Balance Carried  Forward ;;;;9,212.00
+Amount Payable: ;;;;9,212.00

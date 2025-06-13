@@ -1,0 +1,6 @@
+Prefabs 4;F421;FIRST;18.00;2,016.00
+Prefabs 4;F421;SECOND;18.00;1,926.00
+;;;;
+Total Invoice Amount: ;;;;3,942.00
+Balance Brought  Forward ;;;;-58.00
+Amount Payable: ;;;;0.00

@@ -1,0 +1,6 @@
+Womens Hall;LINA;FIRST;30.00;3,150.00
+Womens Hall;LINA;SECOND;30.00;3,150.00
+;;;;
+Total Invoice Amount: ;;;;6,300.00
+Balance Carried  Forward ;;;;6,257.00
+Amount Payable: ;;;;6,257.00

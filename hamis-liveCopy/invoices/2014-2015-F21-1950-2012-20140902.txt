@@ -1,0 +1,7 @@
+Africa;012;SECOND;29.00;3,045.00
+Africa;012;FOURTH;29.00;1,624.00
+Africa;012;FIRST;29.00;3,045.00
+;;;;
+Total Invoice Amount: ;;;;7,714.00
+Balance Carried  Forward ;;;;2,000.00
+Amount Payable: ;;;;2,000.00

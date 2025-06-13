@@ -1,0 +1,7 @@
+Rogers;101;FIRST;26.00;3,276.00
+Rogers;101;SECOND;26.00;2,730.00
+Rogers;101;FOURTH;26.00;520.00
+;;;;
+Total Invoice Amount: ;;;;6,526.00
+Balance Carried  Forward ;;;;7,073.00
+Amount Payable: ;;;;7,073.00

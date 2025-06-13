@@ -1,0 +1,5 @@
+Tom Mboya;Q309;FIRST;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;2,205.00
+Balance Brought  Forward ;;;;-795.00
+Amount Payable: ;;;;0.00

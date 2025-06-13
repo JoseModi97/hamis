@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Filters</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #1c1c1b;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	color: #EEEEEE;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+h3
+{
+	font-size: 18px;
+	margin-top: 7px;
+	color: #444444;
+}
+
+.text_container
+{
+	line-height:1.5em; 
+	padding: 5px; 
+	margin-top: 5px; 
+	padding-top: 0px;
+	border: 1px solid #BBBBBB;
+}
+
+a:link
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+a:hover
+{
+	text-decoration:underline;
+}
+
+a:active
+{
+	color: #FFFF00;
+}
+
+a:visited:hover
+{
+	text-decoration: underline;
+	color: #EEEEEE;
+}
+
+a:visited
+{
+	text-decoration: none;
+	color: #EEEEEE;
+}
+.code
+{
+	font-family: "Lucida Console";
+	font-size: 12px;
+	background-color:#EEEEEE !important;
+	padding: 10px;
+	border: 1px solid;
+	border-color:#CCCCCC ;
+	display: block;
+	color: #333333 !important;
+}
+.hilight {	color: #993300;
+}
+.hl-brackets {    color: Olive;
+}
+.hl-code {    color: Gray;
+}
+.hl-comment {    color: Orange;
+}
+.hl-identifier {    color: Blue;
+}
+.hl-inlinedoc {    color: Blue;
+}
+.hl-inlinetags {    color: Blue;
+}
+.hl-main {	font-size:14px;
+}
+.hl-quotes {    color: Darkred;
+}
+.hl-reserved {    color: Green;
+}
+.hl-string {    color: Red;
+}
+.hl-var {    color: Darkblue;
+}
+.php {	font-family: "Lucida Console";
+	background-color:#FFFFFF;
+	padding: 5px;
+	border: 1px solid;
+	border-color:#006666;
+	display: block;
+	height: 250px;
+	overflow: auto;
+}
+-->
+</style></head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr>
+    <th colspan="2" scope="col"><div align="left"><img src="ZephyrBanner.jpg" width="520" /></div>      <div align="left"></div></th>
+  </tr>
+  <tr>
+    <td width="23%" valign="top"  style="border-top: 1px solid #CCCCCC; padding-top: 0px;"  ><div align="left" style="padding-left:17px; line-height:1.5em;" >
+      <p><a href="index.html">Introduction</a><br />
+        <a href="installation.html">Installation</a><br />
+        <a href="gettingstarted.html">Getting started</a><br />
+        <a href="package.html">Package Definition Reference</a><br />
+        <a href="database.html">Connecting to Database</a><br />
+        <a href="commondb.html">Common DB Operations </a><br />
+        <a href="filter.html">Filter</a><a href="crud.html"></a><br />
+        <a href="multipledb.html">Handling Multiple Databases</a><br />
+        <a href="howto.html">How-Tos</a><br />
+        <a href="deployment.html">Deployment</a><br />
+        <a href="credit.html">Credit</a><br />
+        <a href="feedback.html">Feedback</a><br />
+        <a href="changelog.html">Changelog</a></p>
+      <p><a href="zephyrAPI/index.html">Zephyr API </a><br />
+        <br />
+      </p>
+    </div></td>
+    <td width="77%" valign="top" style="border-top: 1px solid #CCCCCC; padding-top: 0px;" >
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-introduction-&gt;&gt;</h3>
+      <p>in zephyr beta 2 a new feature has been added which is called &quot;filter&quot;. a filter is a special class which executes just before an action get control and just after the content of &quot;view&quot; is rendered and ready to display. you will get full control over input data before they reach to action using these actions and can modify the rendered output before it display. In zephyr beta 2.00, there are two types of filter</p>
+      <p>- input filters<br />
+        - output filters</p>
+      <p>to use filter, you need to specify them in package.xml. lets create one sample input filter and output filter. </p>
+      <p>every filter must have a  &quot;process()&quot; function with two parameter. these parameters are different for input and output filters. lets take a look at the definition</p>
+      <p class="code">-input filter<br />
+        public function process($params, $action)<br />
+        <br />
+        for input filters, zephyr controller pass all the input variables as a serialized array (key=&gt;value pair) as first parameter. second parameter is current action name which is invioked.<br />
+        <br />
+        <span class="hilight">return value: input filters must return the processed data as a serialized array. take a look at the following input filter example</span> </p>
+      <p class="code">-output filters <br />
+public function process($rendered_content, $action)<br />
+<br />
+for output filters, zephyr controller pass rendered output of current template as first parameter. second parameter is current action name which is invioked. </p>
+	</div>
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-input filters-&gt;&gt;</h3>
+      <p>to use input filters, you need to specify them in package.xml using &lt;input_filter&gt;&lt;/input_filter&gt; tag block. you can as many  filters as you want. they will be executed in same order as you include in package.xml </p>
+      <p class="code">&lt;input_filter&gt;sample_input&lt;/input_filter&gt;</p>
+      <p >zephyr controller will invoke this action from &quot;filters&quot; folder . you must save this file as &quot;sample_input.class.php&quot; inside &quot;filters&quot; folder inside your package. lets take a look at our sample_input filter code. this filter will simply escape all input data. </p>
+      <pre><span class="code" >
+//sample_input.class.php
+&lt;?
+class sample_input
+{
+  public function process($params, $action)
+	{
+		$data = unserialize($params);
+		foreach ($data as &$dt)
+		{
+			if (!get_magic_quotes_gpc())
+			$dt = addslashes($dt);
+		}
+		
+		$data = serialize($data);
+		return $data;
+	}
+}
+?></span></pre>
+	</div>
+		
+	<div align="left" class = 'text_container'>
+      <h3>&lt;&lt;-output filters-&gt;&gt;</h3>
+	  <p>to use output filters, you need to specify them in package.xml using &lt;output_filter&gt;&lt;/output_filter&gt; tag block. you can as many  filters as you want. they will be executed in same order as you include in package.xml </p>
+	  <p class="code">&lt;output_filter&gt;sample_output&lt;/output_filter&gt;</p>
+	  <p >zephyr controller will invoke this action from &quot;filters&quot; folder . you must save this file as &quot;sample_output.class.php&quot; inside &quot;filters&quot; folder inside your package. lets take a look at our sample_output filter code. </p>
+	  <pre><span class="code" >
+//sample_output.class.php
+&lt;?
+class sample_output
+{
+  public function process($rendered_output, $action)
+	{
+       return strtoupper($rendered_output);
+	}
+}
+?&gt;</span>
+    </pre>
+    </div></td>
+  </tr>
+
+</table>
+</body>
+</html>

@@ -1,0 +1,6 @@
+Rogers;102;SECOND;10.00;1,050.00
+Africa;405;FIRST;21.00;1,764.00
+;;;;
+Total Invoice Amount: ;;;;2,814.00
+Balance Carried  Forward ;;;;4,471.00
+Amount Payable: ;;;;4,471.00

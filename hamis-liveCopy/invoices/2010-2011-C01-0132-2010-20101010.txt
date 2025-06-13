@@ -1,0 +1,6 @@
+Womens Hall;AQ4;FIRST;21.00;1,911.00
+Womens Hall;AQ4;SECOND;21.00;2,205.00
+;;;;
+Total Invoice Amount: ;;;;4,116.00
+Balance Brought  Forward ;;;;-7,000.00
+Amount Payable: ;;;;-2,884.00

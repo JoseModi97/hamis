@@ -1,0 +1,6 @@
+Prefabs 10;F106;FIRST;18.00;1,890.00
+Prefabs 10;F106;SECOND;18.00;1,890.00
+;;;;
+Total Invoice Amount: ;;;;3,780.00
+Balance Brought  Forward ;;;;-1,774.00
+Amount Payable: ;;;;0.00

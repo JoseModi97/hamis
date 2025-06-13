@@ -1,0 +1,8 @@
+Dag-hammarsjold;QR308;SECOND;21.00;2,646.00
+Dag-hammarsjold;QR308;FOURTH;21.00;1,764.00
+Block  A Male (kmsh);225;FIRST;30.00;3,780.00
+Block  A Male (kmsh);225;SECOND;30.00;3,780.00
+;;;;
+Total Invoice Amount: ;;;;11,970.00
+Balance Carried  Forward ;;;;4,354.00
+Amount Payable: ;;;;4,354.00

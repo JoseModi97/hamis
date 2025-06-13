@@ -1,0 +1,6 @@
+Mitchel;317;FIRST;26.00;3,796.00
+Mitchel;317;SECOND;26.00;2,730.00
+;;;;
+Total Invoice Amount: ;;;;6,526.00
+Balance Carried  Forward ;;;;6,232.00
+Amount Payable: ;;;;6,232.00

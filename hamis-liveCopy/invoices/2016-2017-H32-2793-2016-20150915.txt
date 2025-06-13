@@ -1,0 +1,6 @@
+Prefabs 3;F316;FIRST;26.00;3,978.00
+Prefabs 3;F316;SECOND;26.00;3,276.00
+;;;;
+Total Invoice Amount: ;;;;7,254.00
+Balance Carried  Forward ;;;;7,254.00
+Amount Payable: ;;;;7,254.00

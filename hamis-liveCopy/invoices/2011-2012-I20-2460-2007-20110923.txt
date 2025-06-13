@@ -1,0 +1,6 @@
+Chiromo-m;B308;FIRST;28.00;2,380.00
+Chiromo-m;B308;SECOND;28.00;2,940.00
+;;;;
+Total Invoice Amount: ;;;;5,320.00
+Balance Carried  Forward ;;;;2,996.00
+Amount Payable: ;;;;2,996.00

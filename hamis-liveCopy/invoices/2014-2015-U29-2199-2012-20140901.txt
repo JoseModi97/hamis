@@ -1,0 +1,6 @@
+Block J;J17;FIRST;26.00;2,730.00
+Block J;J17;SECOND;26.00;3,094.00
+;;;;
+Total Invoice Amount: ;;;;5,824.00
+Balance Brought  Forward ;;;;-4.00
+Amount Payable: ;;;;0.00

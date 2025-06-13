@@ -1,0 +1,5 @@
+Kstc 2;107;MODULEII;150.00;600.00
+;;;;
+Total Invoice Amount: ;;;;600.00
+Balance Carried  Forward ;;;;600.00
+Amount Payable: ;;;;600.00

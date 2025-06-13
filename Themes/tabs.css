@@ -1,0 +1,53 @@
+div.TabView div.Tabs
+{
+	height: 20px;
+	overflow: visible;
+	position: relative;
+	left: 150px;
+	top: 0px;
+	align: left;
+}
+
+div.TabView div.Tabs a
+{
+  float: left;
+  display: block;
+  width:  93px;
+  text-align: center;
+  height:      25px;
+  line-height: 16px;
+  vertical-align: middle;
+  background: url(/swa/images/tabs.png) no-repeat -2px -1px;
+  text-decoration: none;
+  font-family: "Times New Roman", Serif;
+  font-weight: 900;
+  font-size: 13px;
+  color: #000080;
+}
+
+div.TabView div.Tabs a:hover, div.TabView div.Tabs a.Active
+{
+  background:  url("/swa/images/tabs.png") no-repeat -2px -35px;
+}
+
+div.TabView div.Pages
+{
+  clear: both;
+  border: 1px solid #404040;
+  overflow: visible;
+  align: left;
+}
+
+div.TabView div.Pages div.Page
+{
+	height: 100%;
+	padding: 0px;
+	overflow: visible;
+	background: #EEFFEE;
+	align: left;
+}
+
+div.TabView div.Pages div.Page div.Pad
+{
+  padding: 3px 18px;
+}

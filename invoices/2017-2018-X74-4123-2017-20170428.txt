@@ -1,0 +1,6 @@
+University (main Campus);303;FIRST;26.00;2,912.00
+University (main Campus);303;SECOND;26.00;3,068.00
+;;;;
+Total Invoice Amount: ;;;;5,980.00
+Balance Carried  Forward ;;;;5,980.00
+Amount Payable: ;;;;5,980.00

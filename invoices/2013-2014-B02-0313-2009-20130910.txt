@@ -1,0 +1,7 @@
+State House Road Hostel;G6;FIRST;26.00;2,730.00
+State House Road Hostel;G6;SECOND;26.00;3,094.00
+State House Road Hostel;G6;FOURTH;26.00;1,456.00
+;;;;
+Total Invoice Amount: ;;;;7,280.00
+Balance Carried  Forward ;;;;7,255.00
+Amount Payable: ;;;;7,255.00
